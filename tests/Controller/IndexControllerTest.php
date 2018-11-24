@@ -4,7 +4,7 @@
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
 
-namespace MSBiosTest\Application\Controller;
+namespace MSBiosTest\Market\Doctrine\Controller;
 
 use MSBios\Application\Controller\IndexController;
 use Zend\Stdlib\ArrayUtils;
@@ -12,7 +12,7 @@ use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
 /**
  * Class IndexControllerTest
- * @package MSBiosTest\Application\Controller
+ * @package MSBiosTest\Market\Doctrine\Controller
  */
 class IndexControllerTest extends AbstractHttpControllerTestCase
 {
@@ -58,7 +58,7 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
     public function testIndexActionViewModelTemplateRenderedWithinLayout()
     {
         $this->dispatch('/', 'GET');
-        $this->assertQuery('.container .jumbotron');
+        $this->assertQuery('.container h1');
 
         return $this;
     }

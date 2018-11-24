@@ -55,5 +55,4 @@ class Brand extends Entity implements
      * )
      */
     private $products;
-
 }

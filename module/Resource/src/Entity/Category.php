@@ -66,5 +66,4 @@ class Category extends Entity implements
      * )
      */
     private $categories;
-
 }

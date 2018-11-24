@@ -3,14 +3,14 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
-namespace MSBiosTest\Application;
+namespace MSBiosTest\Market\Doctrine;
 
-use MSBios\Application\Module;
+use MSBios\Market\Doctrine\Module;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class ModuleTest
- * @package MSBiosTest\Application
+ * @package MSBiosTest\Market\Doctrine
  */
 class ModuleTest extends TestCase
 {
