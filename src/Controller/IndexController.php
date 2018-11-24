@@ -14,5 +14,11 @@ use MSBios\Application\Controller\IndexController as DefaultIndexController;
  */
 class IndexController extends DefaultIndexController
 {
-    // ...
+    /**
+     * @return \Zend\View\Model\ViewModel
+     */
+    public function indexAction()
+    {
+        return parent::indexAction();
+    }
 }

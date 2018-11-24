@@ -1,1 +1,0 @@
-../vendor/msbios/i18n/bin/generate-language.sh

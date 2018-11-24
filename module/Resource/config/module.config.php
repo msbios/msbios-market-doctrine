@@ -3,21 +3,27 @@
  * @access protected
  * @author
  */
-namespace MSBios\Document\Resource;
+namespace MSBios\Market\Resource\Doctrine;
+
+use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 
 return [
-    'service_manager' => [
-        'factories' => [
-            // ...
-        ],
-    ],
+    'doctrine' => [
+        'driver' => [
+            Module::class => [
+                'class' => AnnotationDriver::class,
+                'cache' => 'array',
+                'paths' => [
+                    __DIR__ . '/../src/Entity'
+                ],
+            ],
 
-    'form_elements' => [
-        'invokables' => [
-            // ...
-        ],
-        'factories' => [
-            // ...
+            'orm_default' => [
+                'drivers' => [
+                    Entity::class =>
+                        Module::class
+                ]
+            ],
         ],
     ],
 ];

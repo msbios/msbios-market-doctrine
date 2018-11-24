@@ -3,11 +3,11 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
-namespace MSBios\Market\Resource\Doctrine;
+namespace MSBios\Market\CPanel\Doctrine;
 
 /**
  * Class Module
- * @package MSBios\Market\Resource\Doctrine
+ * @package MSBios\Market\CPanel\Doctrine
  */
 class Module
 {

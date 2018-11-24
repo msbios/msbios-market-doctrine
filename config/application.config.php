@@ -6,6 +6,10 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'Zend\Hydrator',
+        'Zend\Filter',
+        'Zend\Validator',
+        'Zend\Session',
         'Zend\Paginator',
         'Zend\Cache',
         'Zend\Serializer',
@@ -20,29 +24,45 @@ return [
         'Zend\Form',
         'Zend\I18n',
 
-
         'MSBios\Validator',
         'MSBios\Cache',
         'MSBios\Hydrator',
         'MSBios\Db',
-        'MSBios\Form',
-        'MSBios\Test',
         'MSBios\I18n',
         'MSBios\Assetic',
         'MSBios\Widget',
         'MSBios\Theme',
         'MSBios\Navigation',
         'MSBios\Application',
-        'MSBios\Resource',
-        'MSBios\Authentication',
+        'MSBios\Paginator\Doctrine',
+        'MSBios\View',
 
+        'DoctrineModule',
+        'DoctrineORMModule',
+
+        'MSBios\Doctrine',
+        'MSBios\Form',
+        'MSBios\Form\Doctrine',
+        'MSBios\Resource',
+        'MSBios\Resource\Doctrine',
+        'MSBios\Authentication',
+        'MSBios\Authentication\Doctrine',
         'MSBios\CPanel',
+        'MSBios\CPanel\Doctrine',
         'MSBios\Guard',
+        'MSBios\Guard\Doctrine',
         'MSBios\Guard\CPanel',
+        'MSBios\Guard\CPanel\Doctrine',
         'MSBios\Guard\Resource',
+        'MSBios\Guard\Resource\Doctrine',
 
         'MSBios\Guard\DeveloperTools',
+        'MSBios\Test',
         'ZendDeveloperTools',
+
+        'MSBios\Market\Doctrine',
+        'MSBios\Market\CPanel\Doctrine',
+        'MSBios\Market\Resource\Doctrine',
     ],
     // These are various options for the listeners attached to the ModuleManager
     'module_listener_options' => [

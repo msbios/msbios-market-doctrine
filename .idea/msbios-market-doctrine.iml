@@ -2,12 +2,31 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/module/CPanel/src" isTestSource="false" packagePrefix="MSBios\Market\CPanel\Doctrine\" />
+      <sourceFolder url="file://$MODULE_DIR$/module/Resource/src" isTestSource="false" packagePrefix="MSBios\Market\Resource\Doctrine\" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="MSBios\Market\Doctrine\" />
-      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="MSBiosTest\Market\Document\" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="MSBiosTest\Market\Doctrine\" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/transliterator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/container-interop/container-interop" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/digitalnature/php-ref" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dkorsak/doctrine-data-fixture-module" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/data-fixtures" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-module" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-orm-module" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/orm" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/persistence" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/reflection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/gedmo/doctrine-extensions" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kriswallsmith/assetic" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/linkorb/jsmin-php" />
@@ -16,21 +35,30 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/application" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/assetic" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/authentication" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/authentication-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/cpanel" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/cpanel-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/db" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/form" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/form-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/guard" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/guard-cpanel" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/guard-cpanel-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/guard-developer-tools" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/guard-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/guard-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/guard-resource-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/hydrator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/i18n" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/json" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/msbios" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/navigation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/paginator-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/resource" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/resource-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/stdlib" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/test" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/theme" />
@@ -56,6 +84,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/san/san-session-toolbar" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
@@ -71,9 +100,12 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/config" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/debug" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dependency-injection" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/filesystem" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tracy/tracy" />
