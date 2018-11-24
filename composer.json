@@ -1,0 +1,61 @@
+{
+  "name": "msbios/market-doctrine",
+  "description": "MSBios Market Doctrine",
+  "license": "MIT",
+  "keywords": [
+    "php"
+  ],
+  "homepage": "https://github.com/msbios/msbios-market-doctrine",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Judzhin Miles",
+      "email": "info@msbios.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MSBios\\Market\\Doctrine\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MSBiosTest\\Market\\Document\\": "tests/"
+    }
+  },
+  "require": {
+    "msbios/application": "^1.0",
+    "msbios/cpanel": "^1.0",
+    "msbios/resource": "^1.0",
+    "msbios/authentication": "^1.0",
+    "msbios/guard": "^1.0",
+    "msbios/guard-cpanel": "^1.0",
+    "msbios/guard-resource": "^1.0",
+    "zendframework/zend-paginator": "^2.8"
+  },
+  "require-dev": {
+    "msbios/debug": "^1.0",
+    "msbios/test": "^1.0",
+    "msbios/guard-developer-tools": "^1.0"
+  },
+  "scripts": {
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "test": [
+      "@cs-check",
+      "phpunit --colors=always"
+    ],
+    "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+    "upload-coverage": "coveralls -v",
+    "serve": "php -S 0.0.0.0:3107 -t public public/index.php",
+    "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push"
+  },
+  "extra": {
+    "zf": {
+      "component": "MSBios\\Market\\Doctrine"
+    }
+  },
+  "config": {
+    "bin-dir": "bin"
+  }
+}

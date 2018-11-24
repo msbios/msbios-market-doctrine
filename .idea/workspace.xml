@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b5119bd8-cb43-4495-9104-c941491474fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/judzhin.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="913871895">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="134" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PHP" value="134" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Module.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding>
+                <element signature="e#116#143#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Exception/Exception.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/module.config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+              <folding>
+                <element signature="e#124#151#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/application.config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Resource/config/module.config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/autoload/development.global.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/Module.php" />
+        <option value="$PROJECT_DIR$/src/Exception/Exception.php" />
+        <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/config/module.config.php" />
+        <option value="$PROJECT_DIR$/module/Resource/config/module.config.php" />
+        <option value="$PROJECT_DIR$/config/autoload/development.global.php" />
+        <option value="$PROJECT_DIR$/config/application.config.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/public/limitless/package.json" />
+      <path value="$PROJECT_DIR$/vendor/kriswallsmith/assetic/package.json" />
+      <path value="$PROJECT_DIR$/vendor/msbios/cpanel/public/limitless/package.json" />
+      <path value="$PROJECT_DIR$/vendor/msbios/cpanel/themes/limitless/public/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Brew PHP 7.1">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-view" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-servicemanager" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/zfcampus/zf-development-mode" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/msbios/msbios" />
+      <path value="$PROJECT_DIR$/vendor/msbios/db" />
+      <path value="$PROJECT_DIR$/vendor/msbios/i18n" />
+      <path value="$PROJECT_DIR$/vendor/linkorb/jsmin-php" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/msbios/authentication" />
+      <path value="$PROJECT_DIR$/vendor/patchwork/utf8" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/msbios/cache" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/msbios/cpanel" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-authentication" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/matycz/lemo-tracy" />
+      <path value="$PROJECT_DIR$/vendor/msbios/assetic" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/tracy/tracy" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-http" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-math" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-hydrator" />
+      <path value="$PROJECT_DIR$/vendor/msbios/application" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-test" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-modulemanager" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-permissions-acl" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-router" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-loader" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-mvc" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-form" />
+      <path value="$PROJECT_DIR$/vendor/san/san-session-toolbar" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-crypt" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-paginator" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-config" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-mvc-plugin-flashmessenger" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-cache" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-inputfilter" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-debug" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-escaper" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-console" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-developer-tools" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-mvc-plugin-fileprg" />
+      <path value="$PROJECT_DIR$/vendor/msbios/navigation" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-mvc-plugin-identity" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-stdlib" />
+      <path value="$PROJECT_DIR$/vendor/container-interop/container-interop" />
+      <path value="$PROJECT_DIR$/vendor/msbios/view" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-validator" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-session" />
+      <path value="$PROJECT_DIR$/vendor/msbios/json" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-i18n" />
+      <path value="$PROJECT_DIR$/vendor/msbios/theme" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-navigation" />
+      <path value="$PROJECT_DIR$/vendor/msbios/guard-resource" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-json" />
+      <path value="$PROJECT_DIR$/vendor/msbios/widget" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-dom" />
+      <path value="$PROJECT_DIR$/vendor/msbios/guard" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-db" />
+      <path value="$PROJECT_DIR$/vendor/msbios/validator" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-mvc-plugin-prg" />
+      <path value="$PROJECT_DIR$/vendor/msbios/guard-developer-tools" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-serializer" />
+      <path value="$PROJECT_DIR$/vendor/msbios/stdlib" />
+      <path value="$PROJECT_DIR$/vendor/kriswallsmith/assetic" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-uri" />
+      <path value="$PROJECT_DIR$/vendor/msbios/hydrator" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-component-installer" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-filter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/digitalnature/php-ref" />
+      <path value="$PROJECT_DIR$/vendor/msbios/debug" />
+      <path value="$PROJECT_DIR$/vendor/msbios/test" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/msbios/resource" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/msbios/guard-cpanel" />
+      <path value="$PROJECT_DIR$/vendor/msbios/form" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/pdepend/pdepend" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/phpmd/phpmd" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="autoload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.vagrant" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32983682" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="e#116#143#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exception/Exception.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/module.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#124#151#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Resource/config/module.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/autoload/development.global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
