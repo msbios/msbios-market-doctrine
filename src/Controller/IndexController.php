@@ -6,19 +6,25 @@
 
 namespace MSBios\Market\Doctrine\Controller;
 
+use Doctrine\Common\Persistence\ObjectManager;
+use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use MSBios\Application\Controller\IndexController as DefaultIndexController;
+use MSBios\Doctrine\ObjectManagerAwareTrait;
 
 /**
  * Class IndexController
  * @package MSBios\Market\Doctrine\Controller
  */
-class IndexController extends DefaultIndexController
+class IndexController extends DefaultIndexController implements ObjectManagerAwareInterface
 {
+    use ObjectManagerAwareTrait;
+
     /**
-     * @return \Zend\View\Model\ViewModel
+     * IndexController constructor.
+     * @param ObjectManager $objectManager
      */
-    public function indexAction()
+    public function __construct(ObjectManager $objectManager)
     {
-        return parent::indexAction();
+        $this->setObjectManager($objectManager);
     }
 }

@@ -55,4 +55,40 @@ class Brand extends Entity implements
      * )
      */
     private $products;
+
+    /**
+     * @return string
+     */
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param string $slug
+     * @return $this
+     */
+    public function setSlug(string $slug)
+    {
+        $this->slug = $slug;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+     * @param $products
+     * @return $this
+     */
+    public function setProducts($products)
+    {
+        $this->products = $products;
+        return $this;
+    }
 }

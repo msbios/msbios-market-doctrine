@@ -1,0 +1,25 @@
+<?php
+/**
+ * @access protected
+ * @author Judzhin Miles <info[woof-woof]msbios.com>
+ */
+namespace MSBios\Market\Doctrine;
+
+use MSBios\Market\Resource\Doctrine\Entity\Category;
+
+/** @var array $categories */
+$categories = $this->categories;
+?>
+<ul>
+    <?php /** @var Category $category */ ?>
+    <?php foreach ($categories as $category): ?>
+        <li>
+            <a href="<?= $this->url('home/catalog', ['id' => $category->getId(), 'slug' => $category->getSlug()]); ?>">
+                <?= $category->getName(); ?>
+            </a>
+            <?php if ($children = $category->getCategories()) :?>
+                <?= $this->partial('partial/categories.phtml', ['categories' => $children]); ?>
+            <?php endif; ?>
+        </li>
+    <?php endforeach; ?>
+</ul>

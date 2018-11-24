@@ -57,7 +57,7 @@ class Category extends Entity implements
     private $category;
 
     /**
-     * @var ArrayCollection
+     * @var array
      *
      * @ORM\OneToMany(
      *   targetEntity="Category",
@@ -66,4 +66,66 @@ class Category extends Entity implements
      * )
      */
     private $categories;
+
+    /**
+     * Category constructor.
+     */
+    public function __construct()
+    {
+        $this->categories = new ArrayCollection;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param string $slug
+     * @return $this
+     */
+    public function setSlug(string $slug)
+    {
+        $this->slug = $slug;
+        return $this;
+    }
+
+    /**
+     * @return Category
+     */
+    public function getCategory(): Category
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param Category $category
+     * @return $this
+     */
+    public function setCategory(Category $category)
+    {
+        $this->category = $category;
+        return $this;
+    }
+
+    /**
+     * @return array|ArrayCollection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @param array $categories
+     * @return $this
+     */
+    public function setCategories(array $categories)
+    {
+        $this->categories = $categories;
+        return $this;
+    }
 }

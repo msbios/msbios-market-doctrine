@@ -7,25 +7,47 @@
 namespace MSBios\Market\Doctrine;
 
 use Zend\Router\Http\Regex;
-use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
     'router' => [
         'routes' => [
-//            'home' => [
-//                'type' => Regex::class,
-//                'options' => [
-//                    'regex' => '^/(?!cpanel?/)(?<path>.*)',
-//                    'spec' => '/%path%',
-//                ],
-//            ],
+            'home' => [
+                'may_terminate' => true,
+                'child_routes' => [
+                    'catalog' => [
+                        'type' => Regex::class,
+                        'options' => [
+                            'regex' => 'catalog/(?<id>[\d]+)-(?<slug>[a-zA-Z-_\d]+)',
+                            'spec' => 'catalog/%id%-%slug%',
+                            'defaults' => [
+                                'controller' => Controller\CatalogController::class,
+                            ]
+                        ],
+                        'may_terminate' => true,
+                        'child_routes' => [
+                            'brand' => [
+                                'type' => Regex::class,
+                                'options' => [
+                                    'regex' => '/(?<brandid>[\d]+)-(?<brandslug>[a-zA-Z-_\d]+)\.html',
+                                    'spec' => '/%brandid%-%brandslug%.html',
+                                    'defaults' => [
+                                        'action' => 'brand',
+                                    ]
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+            ],
         ],
     ],
 
     'controllers' => [
         'factories' => [
+            Controller\CatalogController::class =>
+                Factory\CatalogControllerFactory::class,
             Controller\IndexController::class =>
-                InvokableFactory::class,
+                Factory\IndexControllerFactory::class,
         ],
         'aliases' => [
             \MSBios\Application\Controller\IndexController::class =>
@@ -35,16 +57,6 @@ return [
 
     'service_manager' => [
         'factories' => [
-            // ...
-        ],
-    ],
-
-
-    'view_manager' => [
-        'template_map' => [
-            // ...
-        ],
-        'template_path_stack' => [
             // ...
         ],
     ],
