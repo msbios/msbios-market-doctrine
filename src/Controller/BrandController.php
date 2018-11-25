@@ -7,10 +7,8 @@
 namespace MSBios\Market\Doctrine\Controller;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use Doctrine\Common\Persistence\ObjectRepository;
 use MSBios\Market\Doctrine\Mvc\AbstractActionController;
 use MSBios\Market\Resource\Doctrine\Entity\Brand;
-use MSBios\Market\Resource\Doctrine\Entity\Category;
 use Zend\View\Model\ModelInterface;
 
 /**
