@@ -12,10 +12,10 @@ use MSBios\Market\Resource\Doctrine\Entity\Brand;
 use Zend\View\Model\ModelInterface;
 
 /**
- * Class BrandController
+ * Class BrandsController
  * @package MSBios\Market\Doctrine\Controller
  */
-class BrandController extends AbstractActionController
+class BrandsController extends AbstractActionController
 {
     /**
      * @return \Zend\View\Model\ViewModel
@@ -28,7 +28,7 @@ class BrandController extends AbstractActionController
         /** @var array $brands */
         $brand = $dem
             ->getRepository(Brand::class)
-            ->findOneBy(['id' => $this->params()->fromRoute('id')]);
+            ->findOneBy(['id' => $this->params()->fromRoute('id'), 'rowStatus' => true]);
 
         if (!$brand) {
             return $this->notFoundAction();

@@ -15,7 +15,10 @@ $product = $this->product;
         <img src="https://via.placeholder.com/300" class="img-responsive" alt="Responsive image"/>
     </div>
     <div class="col-md-9">
-        <a class="h3"><?= $product->getName(); ?></a>
+        <a href="<?= $this->url('home/products/view', ['id' => $product->getId(), 'slug' => $product->getSlug()]); ?>"
+           class="h3">
+            <?= $product->getName(); ?>
+        </a>
         <?= $product->getAnnotation(); ?>
         <a href="#" class="btn btn-default">В корзину</a>
     </div>

@@ -1,0 +1,16 @@
+<?php
+/**
+ * @access protected
+ * @author Judzhin Miles <info[woof-woof]msbios.com>
+ */
+namespace MSBios\Market\Doctrine;
+
+use MSBios\Market\Resource\Doctrine\Entity\Product;
+
+?>
+<h2>Все товары</h2>
+
+<?php /** @var Product $product */ ?>
+<?php foreach ($this->products as $product): ?>
+    <?= $this->partial('partial/product', ['product' => $product]); ?>
+<?php endforeach; ?>

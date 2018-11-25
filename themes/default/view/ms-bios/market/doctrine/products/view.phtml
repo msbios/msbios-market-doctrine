@@ -1,0 +1,16 @@
+<?php
+/**
+ * @access protected
+ * @author Judzhin Miles <info[woof-woof]msbios.com>
+ */
+namespace MSBios\Market\Doctrine;
+
+?>
+<h2><?= $this->product->getName(); ?></h2>
+
+<div class="row">
+    <div class="col-md-6">left</div>
+    <div class="col-md-6">
+        <?= $this->product->getContent(); ?>
+    </div>
+</div>
