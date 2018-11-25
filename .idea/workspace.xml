@@ -91,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/BrandsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="50" column="10" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+            <state relative-caret-position="439">
+              <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
               <folding>
                 <element signature="e#135#181#0#PHP" expanded="true" />
               </folding>
@@ -435,72 +435,6 @@
               <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
               <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="ms-bios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="ms-bios" type="462c0819:PsiDirectoryNode" />
-              <item name="market" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="ms-bios" type="462c0819:PsiDirectoryNode" />
-              <item name="market" type="462c0819:PsiDirectoryNode" />
-              <item name="doctrine" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -550,7 +484,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -971,8 +904,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/BrandsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="50" column="10" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+        <state relative-caret-position="439">
+          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
           <folding>
             <element signature="e#135#181#0#PHP" expanded="true" />
           </folding>
