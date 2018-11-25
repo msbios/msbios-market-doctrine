@@ -4,7 +4,7 @@
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
 namespace MSBios\Market\Doctrine;
-
+use MSBios\Market\Resource\Doctrine\Entity\Product;
 ?>
 <h2><?= $this->brand->getName(); ?></h2>
 <ul class="list-inline">
@@ -21,3 +21,8 @@ namespace MSBios\Market\Doctrine;
         <a href="">названию</a>
     </li>
 </ul>
+
+<?php /** @var Product $product */ ?>
+<?php foreach ($this->products as $product): ?>
+    <?= $this->partial('partial/product', ['product' => $product]); ?>
+<?php endforeach; ?>
