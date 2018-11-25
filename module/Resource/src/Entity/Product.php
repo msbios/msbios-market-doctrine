@@ -6,6 +6,7 @@
 
 namespace MSBios\Market\Resource\Doctrine\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use MSBios\Guard\Resource\Doctrine\BlameableAwareInterface;
@@ -64,6 +65,27 @@ class Product extends Entity implements
      * @ORM\Column(name="annotation", type="text", nullable=false)
      */
     private $annotation;
+
+    /**
+     * @var array
+     *
+     * @ORM\ManyToMany(targetEntity="Category")
+     * @ORM\OrderBy({"name"="ASC"})
+     * @ORM\JoinTable(
+     *     name="mrk_t_product_categories",
+     *     joinColumns={@ORM\JoinColumn(name="productid", referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="categoryid", referencedColumnName="id")}
+     * )
+     **/
+    private $categories;
+
+    /**
+     * Product constructor.
+     */
+    public function __construct()
+    {
+        $this->categories = new ArrayCollection;
+    }
 
     /**
      * @return Brand

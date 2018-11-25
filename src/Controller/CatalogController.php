@@ -24,6 +24,20 @@ use Zend\View\Model\ModelInterface;
 class CatalogController extends AbstractActionController
 {
     /**
+     * @param Category $category
+     * @param array $categories
+     */
+    private static function prepareCategories(Category $category, array &$categories)
+    {
+        $categories[$category->getId()] = $category;
+
+        /** @var Category $category */
+        foreach ($category->getCategories() as $category) {
+            self::prepareCategories($category, $categories);
+        }
+    }
+
+    /**
      * @return \Zend\View\Model\ViewModel
      */
     public function indexAction()
@@ -54,10 +68,27 @@ class CatalogController extends AbstractActionController
             ->getRepository(Brand::class)
             ->findAll();
 
+        /** @var array $categories */
+        $categories = [];
+        self::prepareCategories($category, $categories);
+
+        /**
+         * @param QueryBuilder $qb
+         * @return QueryBuilderPaginator
+         */
+        $fetchBy = function (QueryBuilder $qb) use ($categories) {
+            $qb
+                ->join('o.categories', 'c', 'WITH')
+                ->where($qb->expr()->in('c.id', ':categories'))
+                ->setParameter('categories', $categories);
+
+            return new QueryBuilderPaginator($qb);
+        };
+
         /** @var Paginator $products */
         $products = $dem
             ->getRepository(Product::class)
-            ->findAll();
+            ->fetchAll($fetchBy);
 
         /** @var ModelInterface $viewModel */
         $viewModel = parent::indexAction();
@@ -105,11 +136,6 @@ class CatalogController extends AbstractActionController
             'slug' => $category->getSlug()
         ]);
 
-        /** @var array $categories */
-        $categories = $categoryRepository->findBy([
-            'category' => null
-        ]);
-
         /** @var array $brands */
         $brands = $dem
             ->getRepository(Brand::class)
@@ -138,7 +164,6 @@ class CatalogController extends AbstractActionController
             'brand' => $brand,
             'category' => $category,
             'brands' => $brands,
-            'categories' => $categories,
             'products' => $products
         ]);
 
