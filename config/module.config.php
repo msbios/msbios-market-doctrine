@@ -6,7 +6,9 @@
 
 namespace MSBios\Market\Doctrine;
 
+use MSBios\Doctrine\Initializer\ObjectManagerInitializer;
 use Zend\Router\Http\Regex;
+use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
     'router' => [
@@ -37,6 +39,29 @@ return [
                             ],
                         ],
                     ],
+                    'brand' => [
+                        'type' => Regex::class,
+                        'options' => [
+                            'regex' => 'brand/(?<id>[\d]+)-(?<slug>[a-zA-Z-_\d]+)',
+                            'spec' => 'catalog/%id%-%slug%',
+                            'defaults' => [
+                                'controller' => Controller\CatalogController::class,
+                            ]
+                        ],
+                        'may_terminate' => true,
+                        'child_routes' => [
+                            'brand' => [
+                                'type' => Regex::class,
+                                'options' => [
+                                    'regex' => '/(?<brandid>[\d]+)-(?<brandslug>[a-zA-Z-_\d]+)\.html',
+                                    'spec' => '/%brandid%-%brandslug%.html',
+                                    'defaults' => [
+                                        'action' => 'brand',
+                                    ]
+                                ],
+                            ],
+                        ],
+                    ],
                 ],
             ],
         ],
@@ -45,13 +70,17 @@ return [
     'controllers' => [
         'factories' => [
             Controller\CatalogController::class =>
-                Factory\CatalogControllerFactory::class,
+                InvokableFactory::class,
             Controller\IndexController::class =>
-                Factory\IndexControllerFactory::class,
+                InvokableFactory::class,
         ],
         'aliases' => [
             \MSBios\Application\Controller\IndexController::class =>
                 Controller\IndexController::class
+        ],
+        'initializers' => [
+            ObjectManagerInitializer::class =>
+                ObjectManagerInitializer::class
         ]
     ],
 

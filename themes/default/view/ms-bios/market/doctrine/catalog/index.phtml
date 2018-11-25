@@ -8,25 +8,16 @@ namespace MSBios\Market\Doctrine;
 use MSBios\Market\Resource\Doctrine\Entity\Brand;
 
 ?>
-<h1>MSBios Market Doctrine</h1>
+<h2><?= $this->category->getName(); ?></h2>
+<ul class="list-inline">
 
-<div class="row">
-    <div class="col-md-3">
-        <?= $this->partial('partial/categories.phtml', ['categories' => $this->categories]); ?>
-    </div>
-    <div class="col-md-9">
-        <h2><?= $this->category->getName(); ?></h2>
-        <ul class="list-inline">
+    <?php /** @var Brand $brand */ ?>
+    <?php foreach ($this->brands as $brand) : ?>
+        <li class="list-inline-item">
+            <a href="<?= $this->url('home/catalog/brand', ['brandid' => $brand->getId(), 'brandslug' => $brand->getSlug()])?>">
+                <?= $brand->getName(); ?>
+            </a>
+        </li>
+    <?php endforeach; ?>
 
-            <?php /** @var Brand $brand */ ?>
-            <?php foreach ($this->brands as $brand) : ?>
-                <li class="list-inline-item">
-                    <a href="<?= $this->url('home/catalog/brand', ['brandid' => $brand->getId(), 'brandslug' => $brand->getSlug()])?>">
-                        <?= $brand->getName(); ?>
-                    </a>
-                </li>
-            <?php endforeach; ?>
-
-        </ul>
-    </div>
-</div>
+</ul>

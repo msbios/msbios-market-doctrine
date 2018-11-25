@@ -16,10 +16,10 @@ use MSBios\Market\Resource\Doctrine\Entity\Category;
 use Zend\View\Model\ModelInterface;
 
 /**
- * Class CatalogController
+ * Class BrandController
  * @package MSBios\Market\Doctrine\Controller
  */
-class CatalogController extends DefaultIndexController implements ObjectManagerAwareInterface
+class BrandController extends DefaultIndexController implements ObjectManagerAwareInterface
 {
     use ObjectManagerAwareTrait;
 

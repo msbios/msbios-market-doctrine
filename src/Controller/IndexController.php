@@ -6,7 +6,6 @@
 
 namespace MSBios\Market\Doctrine\Controller;
 
-use Doctrine\Common\Persistence\ObjectManager;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use MSBios\Application\Controller\IndexController as DefaultIndexController;
 use MSBios\Doctrine\ObjectManagerAwareTrait;
@@ -18,13 +17,4 @@ use MSBios\Doctrine\ObjectManagerAwareTrait;
 class IndexController extends DefaultIndexController implements ObjectManagerAwareInterface
 {
     use ObjectManagerAwareTrait;
-
-    /**
-     * IndexController constructor.
-     * @param ObjectManager $objectManager
-     */
-    public function __construct(ObjectManager $objectManager)
-    {
-        $this->setObjectManager($objectManager);
-    }
 }
