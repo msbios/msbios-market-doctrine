@@ -77,6 +77,7 @@ class CatalogController extends AbstractActionController
          * @return QueryBuilderPaginator
          */
         $fetchBy = function (QueryBuilder $qb) use ($categories) {
+
             $qb
                 ->join('o.categories', 'c', 'WITH')
                 ->where($qb->expr()->in('c.id', ':categories'))
