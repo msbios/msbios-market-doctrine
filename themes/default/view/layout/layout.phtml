@@ -71,10 +71,14 @@ use MSBios\Market\Resource\Doctrine\Entity\Brand;
             <h3>Все бренды:</h3>
             <?php /** @var Brand $brand */ ?>
             <?php foreach ($this->brands as $brand): ?>
-                <a href=""><?= $brand->getName();?></a>
+                <a href="<?= $this->url('home/brand', ['id' => $brand->getId(), 'slug' => $brand->getSlug()]); ?>">
+                    <?= $brand->getName();?>
+                </a>
             <?php endforeach; ?>
         </div>
-        <?= $this->content ?>
+        <div class="col-md-9">
+            <?= $this->content ?>
+        </div>
     </div>
 
     <hr>

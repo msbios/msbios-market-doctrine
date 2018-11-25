@@ -8,21 +8,19 @@ namespace MSBios\Market\Doctrine\Controller;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\Persistence\ObjectRepository;
-use DoctrineModule\Persistence\ObjectManagerAwareInterface;
-use MSBios\Application\Controller\IndexController as DefaultIndexController;
-use MSBios\Doctrine\ObjectManagerAwareTrait;
+use MSBios\Market\Doctrine\Mvc\AbstractActionController;
 use MSBios\Market\Resource\Doctrine\Entity\Brand;
 use MSBios\Market\Resource\Doctrine\Entity\Category;
+use MSBios\Market\Resource\Doctrine\Entity\Product;
+use Zend\Paginator\Paginator;
 use Zend\View\Model\ModelInterface;
 
 /**
  * Class CatalogController
  * @package MSBios\Market\Doctrine\Controller
  */
-class CatalogController extends DefaultIndexController implements ObjectManagerAwareInterface
+class CatalogController extends AbstractActionController
 {
-    use ObjectManagerAwareTrait;
-
     /**
      * @return \Zend\View\Model\ViewModel
      */
@@ -49,14 +47,14 @@ class CatalogController extends DefaultIndexController implements ObjectManagerA
             'slug' => $category->getSlug()
         ]);
 
-        /** @var array $categories */
-        $categories = $categoryRepository->findBy([
-            'category' => null
-        ]);
-
         /** @var array $brands */
         $brands = $dem
             ->getRepository(Brand::class)
+            ->findAll();
+
+        /** @var Paginator $products */
+        $products = $dem
+            ->getRepository(Product::class)
             ->findAll();
 
         /** @var ModelInterface $viewModel */
@@ -64,7 +62,7 @@ class CatalogController extends DefaultIndexController implements ObjectManagerA
         $viewModel->setVariables([
             'category' => $category,
             'brands' => $brands,
-            'categories' => $categories
+            'products' => $products
         ]);
 
         return $viewModel;

@@ -3,21 +3,37 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
+
 namespace MSBios\Market\Doctrine;
 
 use MSBios\Market\Resource\Doctrine\Entity\Brand;
+use MSBios\Market\Resource\Doctrine\Entity\Product;
 
 ?>
-<h2><?= $this->category->getName(); ?></h2>
-<ul class="list-inline">
+    <h2><?= $this->category->getName(); ?></h2>
+    <ul class="list-inline">
+        <?php /** @var Brand $brand */ ?>
+        <?php foreach ($this->brands as $brand) : ?>
+            <li class="list-inline-item">
+                <a href="<?= $this->url('home/catalog/brand', ['brandid' => $brand->getId(), 'brandslug' => $brand->getSlug()]) ?>">
+                    <?= $brand->getName(); ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
 
-    <?php /** @var Brand $brand */ ?>
-    <?php foreach ($this->brands as $brand) : ?>
-        <li class="list-inline-item">
-            <a href="<?= $this->url('home/catalog/brand', ['brandid' => $brand->getId(), 'brandslug' => $brand->getSlug()])?>">
-                <?= $brand->getName(); ?>
-            </a>
-        </li>
-    <?php endforeach; ?>
+    <?php /** @var Product $product */ ?>
+    <?php foreach ($this->products as $product): ?>
 
-</ul>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="https://via.placeholder.com/300" class="img-responsive" alt="Responsive image">
+        </div>
+        <div class="col-md-9">
+            <a class="h3"><?= $product->getName(); ?></a>
+            <?= $product->getAnnotation(); ?>
+            <a href="#" class="btn btn-default">В корзину</a>
+        </div>
+    </div>
+
+<?php endforeach; ?>

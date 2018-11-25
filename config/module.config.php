@@ -42,24 +42,11 @@ return [
                     'brand' => [
                         'type' => Regex::class,
                         'options' => [
-                            'regex' => 'brand/(?<id>[\d]+)-(?<slug>[a-zA-Z-_\d]+)',
-                            'spec' => 'catalog/%id%-%slug%',
+                            'regex' => 'brand/(?<id>[\d]+)-(?<slug>[a-zA-Z-_\d]+)\.html',
+                            'spec' => 'brand/%id%-%slug%.html',
                             'defaults' => [
-                                'controller' => Controller\CatalogController::class,
+                                'controller' => Controller\BrandController::class,
                             ]
-                        ],
-                        'may_terminate' => true,
-                        'child_routes' => [
-                            'brand' => [
-                                'type' => Regex::class,
-                                'options' => [
-                                    'regex' => '/(?<brandid>[\d]+)-(?<brandslug>[a-zA-Z-_\d]+)\.html',
-                                    'spec' => '/%brandid%-%brandslug%.html',
-                                    'defaults' => [
-                                        'action' => 'brand',
-                                    ]
-                                ],
-                            ],
                         ],
                     ],
                 ],
@@ -69,6 +56,8 @@ return [
 
     'controllers' => [
         'factories' => [
+            Controller\BrandController::class =>
+                InvokableFactory::class,
             Controller\CatalogController::class =>
                 InvokableFactory::class,
             Controller\IndexController::class =>
