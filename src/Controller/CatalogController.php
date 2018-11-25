@@ -66,7 +66,7 @@ class CatalogController extends AbstractActionController
         /** @var array $brands */
         $brands = $dem
             ->getRepository(Brand::class)
-            ->findAll();
+            ->findByCategory($category);
 
         /** @var array $categories */
         $categories = [];
@@ -81,7 +81,9 @@ class CatalogController extends AbstractActionController
             $qb
                 ->join('o.categories', 'c', 'WITH')
                 ->where($qb->expr()->in('c.id', ':categories'))
-                ->setParameter('categories', $categories);
+                ->andWhere($qb->expr()->eq('o.rowStatus', ':rowStatus'))
+                ->setParameter('categories', $categories)
+                ->setParameter('rowStatus', true);
 
             return new QueryBuilderPaginator($qb);
         };

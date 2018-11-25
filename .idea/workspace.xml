@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5119bd8-cb43-4495-9104-c941491474fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/module/Resource/src/Repository/BrandRepository.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Mvc/AbstractActionController.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/default/view/ms-bios/market/doctrine/brand/index.phtml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/default/view/partial/product.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/module.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Resource/src/Entity/Brand.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Resource/src/Entity/Brand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/Resource/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Resource/src/Entity/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BrandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BrandController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CatalogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CatalogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Module.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/default/view/layout/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/view/layout/layout.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/default/view/ms-bios/market/doctrine/catalog/brand.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/view/ms-bios/market/doctrine/catalog/brand.phtml" afterDir="false" />
@@ -39,43 +42,43 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="2" />
-          <entry key="php" value="74" />
+          <entry key="php" value="78" />
           <entry key="phtml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="89" />
+          <entry key="PHP" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="69" />
-          <entry key="php" value="4288" />
+          <entry key="php" value="4865" />
           <entry key="phtml" value="1755" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="69" />
-          <entry key="PHP" value="6043" />
+          <entry key="PHP" value="6620" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="4" />
+          <entry key="PHP Class.type" value="5" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/CatalogController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="60" column="58" lean-forward="true" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
+            <state relative-caret-position="424">
+              <caret line="82" selection-start-line="82" selection-end-line="82" selection-end-column="63" />
               <folding>
                 <element signature="e#135#181#0#PHP" expanded="true" />
               </folding>
@@ -84,10 +87,44 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Resource/src/Entity/Brand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="26" column="82" lean-forward="true" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="82" />
+              <folding>
+                <element signature="e#140#172#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/Resource/src/Repository/BrandRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="e#6#34#0#PHP" expanded="true" />
+                <element signature="e#144#174#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/msbios/resource-doctrine/src/EntityRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/QueryBuilder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="933" column="15" lean-forward="true" selection-start-line="933" selection-start-column="15" selection-end-line="933" selection-end-column="82" />
+            <state relative-caret-position="148">
+              <caret line="933" column="82" lean-forward="true" selection-start-line="933" selection-end-line="933" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -105,27 +142,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/view/partial/product.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/view/ms-bios/market/doctrine/brand/index.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/Resource/src/Entity/Product.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="254">
@@ -138,34 +154,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/msbios/resource-doctrine/src/ContentableAwareTrait.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/default/view/layout/layout.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="81" column="10" lean-forward="true" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="439">
+              <caret line="71" column="45" lean-forward="true" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/BrandController.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-              <folding>
-                <element signature="e#135#181#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -211,14 +212,12 @@
         <option value="$PROJECT_DIR$/src/Factory/CatalogControllerFactory.php" />
         <option value="$PROJECT_DIR$/module/Resource/src/Entity/Category.php" />
         <option value="$PROJECT_DIR$/view/partial/categories.phtml" />
-        <option value="$PROJECT_DIR$/module/Resource/src/Entity/Brand.php" />
         <option value="$PROJECT_DIR$/view/ms-bios/market/doctrine/catalog/index.phtml" />
         <option value="$PROJECT_DIR$/view/ms-bios/market/doctrine/catalog/brand.phtml" />
         <option value="$PROJECT_DIR$/view/ms-bios/market/doctrine/index/index.phtml" />
         <option value="$PROJECT_DIR$/view/layout/layout.phtml" />
         <option value="$PROJECT_DIR$/config/application.config.php" />
         <option value="$PROJECT_DIR$/config/autoload/development.global.php" />
-        <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Mvc/AbstractActionController.php" />
         <option value="$PROJECT_DIR$/config/module.config.php" />
         <option value="$PROJECT_DIR$/src/Module.php" />
@@ -229,7 +228,10 @@
         <option value="$PROJECT_DIR$/themes/default/view/ms-bios/market/doctrine/catalog/index.phtml" />
         <option value="$PROJECT_DIR$/themes/default/view/ms-bios/market/doctrine/catalog/brand.phtml" />
         <option value="$PROJECT_DIR$/module/Resource/src/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/module/Resource/src/Entity/Brand.php" />
+        <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Controller/CatalogController.php" />
+        <option value="$PROJECT_DIR$/module/Resource/src/Repository/BrandRepository.php" />
       </list>
     </option>
   </component>
@@ -453,13 +455,6 @@
             <path>
               <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
               <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Resource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -467,6 +462,32 @@
               <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msbios-market-doctrine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msbios-market-doctrine" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -519,7 +540,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -532,7 +553,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32983682" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32983682" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -547,20 +568,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/msbios/cpanel/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/msbios/guard-resource-doctrine/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/msbios/resource-doctrine/src/Entity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -642,6 +649,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <element signature="e#6#38#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -732,16 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Resource/src/Entity/Brand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding>
-            <element signature="e#140#172#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/zendframework/zend-router/src/RouteMatch.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -808,16 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="e#135#194#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Mvc/AbstractActionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -877,16 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/view/layout/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="81" column="10" lean-forward="true" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/view/partial/product.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -927,19 +907,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/msbios/resource-doctrine/src/EntityRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/QueryBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="933" column="15" lean-forward="true" selection-start-line="933" selection-start-column="15" selection-end-line="933" selection-end-column="82" />
+        <state relative-caret-position="148">
+          <caret line="933" column="82" lean-forward="true" selection-start-line="933" selection-end-line="933" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Resource/src/Entity/Brand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="26" column="82" lean-forward="true" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="82" />
+          <folding>
+            <element signature="e#140#172#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/view/layout/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="71" column="45" lean-forward="true" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CatalogController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="60" column="58" lean-forward="true" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
+        <state relative-caret-position="424">
+          <caret line="82" selection-start-line="82" selection-end-line="82" selection-end-column="63" />
           <folding>
             <element signature="e#135#181#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Resource/src/Repository/BrandRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#6#34#0#PHP" expanded="true" />
+            <element signature="e#144#174#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

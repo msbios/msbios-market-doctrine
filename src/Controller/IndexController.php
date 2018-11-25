@@ -6,15 +6,13 @@
 
 namespace MSBios\Market\Doctrine\Controller;
 
-use DoctrineModule\Persistence\ObjectManagerAwareInterface;
-use MSBios\Application\Controller\IndexController as DefaultIndexController;
-use MSBios\Doctrine\ObjectManagerAwareTrait;
+use MSBios\Market\Doctrine\Mvc\AbstractActionController;
 
 /**
  * Class IndexController
  * @package MSBios\Market\Doctrine\Controller
  */
-class IndexController extends DefaultIndexController implements ObjectManagerAwareInterface
+class IndexController extends AbstractActionController
 {
-    use ObjectManagerAwareTrait;
+    // ...
 }
