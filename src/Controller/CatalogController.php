@@ -8,10 +8,12 @@ namespace MSBios\Market\Doctrine\Controller;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\Persistence\ObjectRepository;
+use Doctrine\ORM\QueryBuilder;
 use MSBios\Market\Doctrine\Mvc\AbstractActionController;
 use MSBios\Market\Resource\Doctrine\Entity\Brand;
 use MSBios\Market\Resource\Doctrine\Entity\Category;
 use MSBios\Market\Resource\Doctrine\Entity\Product;
+use MSBios\Paginator\Doctrine\Adapter\QueryBuilderPaginator;
 use Zend\Paginator\Paginator;
 use Zend\View\Model\ModelInterface;
 
@@ -113,13 +115,31 @@ class CatalogController extends AbstractActionController
             ->getRepository(Brand::class)
             ->findAll();
 
+        /**
+         * @param QueryBuilder $qb
+         * @return QueryBuilderPaginator
+         */
+        $fetchBy = function (QueryBuilder $qb) use ($brand) {
+
+            $qb->where($qb->expr()->eq('o.brand', ':brand'))
+                ->setParameter('brand', $brand);
+
+            return new QueryBuilderPaginator($qb);
+        };
+
+        /** @var Paginator $products */
+        $products = $dem
+            ->getRepository(Product::class)
+            ->fetchAll($fetchBy);
+
         /** @var ModelInterface $viewModel */
         $viewModel = parent::indexAction();
         $viewModel->setVariables([
             'brand' => $brand,
             'category' => $category,
             'brands' => $brands,
-            'categories' => $categories
+            'categories' => $categories,
+            'products' => $products
         ]);
 
         return $viewModel;

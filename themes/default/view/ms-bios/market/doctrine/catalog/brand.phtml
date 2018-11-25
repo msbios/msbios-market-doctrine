@@ -3,9 +3,11 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
+
 namespace MSBios\Market\Doctrine;
 
 use MSBios\Market\Resource\Doctrine\Entity\Brand;
+use MSBios\Market\Resource\Doctrine\Entity\Product;
 
 ?>
 <h2><?= $this->category->getName(); ?> "<?= $this->brand->getName(); ?>"</h2>
@@ -14,10 +16,16 @@ use MSBios\Market\Resource\Doctrine\Entity\Brand;
     <?php /** @var Brand $brand */ ?>
     <?php foreach ($this->brands as $brand) : ?>
         <li class="list-inline-item">
-            <a href="<?= $this->url('home/catalog/brand', ['brandid' => $brand->getId(), 'brandslug' => $brand->getSlug()])?>">
+            <a href="<?= $this->url('home/catalog/brand', ['brandid' => $brand->getId(), 'brandslug' => $brand->getSlug()]) ?>">
                 <?= $brand->getName(); ?>
             </a>
         </li>
     <?php endforeach; ?>
 
 </ul>
+
+<?php /** @var Product $product */ ?>
+<?php foreach ($this->products as $product): ?>
+    <?= $this->partial('partial/product', ['product' => $product]); ?>
+<?php endforeach; ?>
+

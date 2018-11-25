@@ -1,0 +1,22 @@
+<?php
+/**
+ * @access protected
+ * @author Judzhin Miles <info[woof-woof]msbios.com>
+ */
+namespace MSBios\Market\Doctrine;
+
+use MSBios\Market\Resource\Doctrine\Entity\Product;
+
+/** @var Product $product */
+$product = $this->product;
+?>
+<div class="row" style="margin-bottom: 30px;">
+    <div class="col-md-3">
+        <img src="https://via.placeholder.com/300" class="img-responsive" alt="Responsive image"/>
+    </div>
+    <div class="col-md-9">
+        <a class="h3"><?= $product->getName(); ?></a>
+        <?= $product->getAnnotation(); ?>
+        <a href="#" class="btn btn-default">В корзину</a>
+    </div>
+</div>
