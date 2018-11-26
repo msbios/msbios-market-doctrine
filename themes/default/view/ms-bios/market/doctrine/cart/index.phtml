@@ -5,4 +5,47 @@
  */
 namespace MSBios\Market\Doctrine;
 ?>
+
+<?php /** @var \Zend\View\Helper\FlashMessenger $flash */ ?>
+<?php $flash = $this->flashMessenger(); ?>
+
+<?php if ($flash->hasSuccessMessages()) : ?>
+
+    <div class="alert alert-success no-border">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+        <span class="text-semibold"><?= $this->translate('Success!'); ?></span>
+        <?= implode(', ', $flash->getSuccessMessages()); ?>
+    </div>
+
+<?php endif; ?>
+
+<?php if ($flash->hasInfoMessages()) : ?>
+
+    <div class="alert alert-info no-border">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+        <span class="text-semibold"><?= $this->translate('Info!'); ?></span>
+        <?= implode(', ', $flash->getInfoMessages()); ?>
+    </div>
+
+<?php endif; ?>
+
+<?php if ($flash->hasWarningMessages()) : ?>
+
+    <div class="alert alert-danger no-border">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+        <span class="text-semibold"><?= $this->translate('Warning!'); ?></span>
+        <?= implode(', ', $flash->getWarningMessages()); ?>
+    </div>
+
+<?php endif; ?>
+
 <h2>Корзина</h2>

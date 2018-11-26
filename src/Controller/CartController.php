@@ -20,6 +20,17 @@ class CartController extends AbstractActionController
      */
     public function indexAction()
     {
+        if ($this->getRequest()->isPost()) {
+
+            $this
+                ->flashMessenger()
+                ->addSuccessMessage('Product was successfully added to cart.');
+
+            return $this
+                ->redirect()
+                ->toRoute($this->getEvent()->getRouteMatch()->getMatchedRouteName());
+        }
+
         return new ViewModel;
     }
 }
