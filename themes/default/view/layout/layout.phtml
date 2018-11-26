@@ -45,26 +45,26 @@ use MSBios\Market\Resource\Doctrine\Entity\Brand;
             </button>
             <a class="navbar-brand" href="<?= $this->url('home') ?>">
                 <img src="<?= $this->basePath('default/img/zf-logo-mark.svg') ?>" height="28"
-                     alt="Zend Framework <?= \MSBios\Application\Module::VERSION ?>"/>&nbsp;Skeleton Application
+                     alt="Zend Framework <?= \MSBios\Application\Module::VERSION ?>"/>&nbsp;MSBios Market Doctrine
             </a>
         </div>
-        <div class="collapse navbar-collapse">
 
-            <?=
-            $this->navigation('Zend\Navigation\Default')
+        <div class="collapse navbar-collapse">
+            <?php $this->navigation('Zend\Navigation\Default')
                 ->menu()
                 ->setUlClass('nav navbar-nav')
                 ->setPartial('partial/menu.phtml')
                 ->setMaxDepth(0)
                 ->render(); ?>
 
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="<?= $this->url('home/cart'); ?>">Корзина</a></li>
+            </ul>
+
         </div>
     </div>
 </nav>
 <div class="container">
-
-    <h1>MSBios Market Doctrine</h1>
-
     <div class="row">
         <div class="col-md-3">
             <?= $this->partial('partial/categories.phtml', ['categories' => $this->categories]); ?>

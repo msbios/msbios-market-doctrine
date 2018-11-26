@@ -80,11 +80,23 @@ class Product extends Entity implements
     private $categories;
 
     /**
+     * @var array
+     *
+     * @ORM\OneToMany(
+     *   targetEntity="Variant",
+     *   mappedBy="product",
+     *   cascade={"persist", "remove"}
+     * )
+     */
+    private $variants;
+
+    /**
      * Product constructor.
      */
     public function __construct()
     {
         $this->categories = new ArrayCollection;
+        $this->variants = new ArrayCollection;
     }
 
     /**
@@ -97,10 +109,12 @@ class Product extends Entity implements
 
     /**
      * @param Brand $brand
+     * @return $this
      */
-    public function setBrand(Brand $brand): void
+    public function setBrand(Brand $brand)
     {
         $this->brand = $brand;
+        return $this;
     }
 
     /**
@@ -113,10 +127,12 @@ class Product extends Entity implements
 
     /**
      * @param string $slug
+     * @return $this
      */
-    public function setSlug(string $slug): void
+    public function setSlug(string $slug)
     {
         $this->slug = $slug;
+        return $this;
     }
 
     /**
@@ -129,9 +145,29 @@ class Product extends Entity implements
 
     /**
      * @param string $annotation
+     * @return $this
      */
-    public function setAnnotation(string $annotation): void
+    public function setAnnotation(string $annotation)
     {
         $this->annotation = $annotation;
+        return $this;
+    }
+
+    /**
+     * @return array|ArrayCollection
+     */
+    public function getVariants()
+    {
+        return $this->variants;
+    }
+
+    /**
+     * @param array $variants
+     * @return $this
+     */
+    public function setVariants(array $variants)
+    {
+        $this->variants = $variants;
+        return $this;
     }
 }

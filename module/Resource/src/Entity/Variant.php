@@ -49,7 +49,7 @@ class Variant extends Entity implements
     /**
      * @var string
      *
-     * @ORM\Column(name="code", length=128)
+     * @ORM\Column(name="code", length=128, nullable=false)
      */
     private $code;
 
@@ -63,8 +63,71 @@ class Variant extends Entity implements
     /**
      * @var string
      *
-     * @ORM\Column(type="decimal", precision=14, scale=2)
+     * @ORM\Column(type="decimal", precision=14, scale=2, nullable=false)
      */
     private $compare;
 
+    /**
+     * @return Product
+     */
+    public function getProduct(): Product
+    {
+        return $this->product;
+    }
+
+    /**
+     * @param Product $product
+     */
+    public function setProduct(Product $product): void
+    {
+        $this->product = $product;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCode(): string
+    {
+        return $this->code;
+    }
+
+    /**
+     * @param string $code
+     */
+    public function setCode(string $code): void
+    {
+        $this->code = $code;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrice(): string
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param string $price
+     */
+    public function setPrice(string $price): void
+    {
+        $this->price = $price;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCompare(): string
+    {
+        return $this->compare;
+    }
+
+    /**
+     * @param string $compare
+     */
+    public function setCompare(string $compare): void
+    {
+        $this->compare = $compare;
+    }
 }

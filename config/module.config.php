@@ -17,6 +17,25 @@ return [
             'home' => [
                 'may_terminate' => true,
                 'child_routes' => [
+                    'brands' => [
+                        'type' => Regex::class,
+                        'options' => [
+                            'regex' => 'brands/(?<id>[\d]+)-(?<slug>[a-zA-Z-_\d]+)\.html',
+                            'spec' => 'brands/%id%-%slug%.html',
+                            'defaults' => [
+                                'controller' => Controller\BrandsController::class,
+                            ]
+                        ],
+                    ],
+                    'cart' => [
+                        'type' => Segment::class,
+                        'options' => [
+                            'route' => 'cart[.html]',
+                            'defaults' => [
+                                'controller' => Controller\CartController::class,
+                            ]
+                        ],
+                    ],
                     'catalog' => [
                         'type' => Regex::class,
                         'options' => [
@@ -38,16 +57,6 @@ return [
                                     ]
                                 ],
                             ],
-                        ],
-                    ],
-                    'brands' => [
-                        'type' => Regex::class,
-                        'options' => [
-                            'regex' => 'brands/(?<id>[\d]+)-(?<slug>[a-zA-Z-_\d]+)\.html',
-                            'spec' => 'brands/%id%-%slug%.html',
-                            'defaults' => [
-                                'controller' => Controller\BrandsController::class,
-                            ]
                         ],
                     ],
                     'products' => [
@@ -80,6 +89,8 @@ return [
     'controllers' => [
         'factories' => [
             Controller\BrandsController::class =>
+                InvokableFactory::class,
+            Controller\CartController::class =>
                 InvokableFactory::class,
             Controller\CatalogController::class =>
                 InvokableFactory::class,
