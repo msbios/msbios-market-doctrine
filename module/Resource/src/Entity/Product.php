@@ -74,6 +74,13 @@ class Product extends Entity implements
     private $visible = true;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="recommended", type="boolean", options={"default" : 0})
+     */
+    private $recommended = false;
+
+    /**
      * @var array
      *
      * @ORM\ManyToMany(targetEntity="Category")
@@ -175,6 +182,24 @@ class Product extends Entity implements
     public function setVisible(bool $visible)
     {
         $this->visible = $visible;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isRecommended(): bool
+    {
+        return $this->recommended;
+    }
+
+    /**
+     * @param bool $recommended
+     * @return $this
+     */
+    public function setRecommended(bool $recommended)
+    {
+        $this->recommended = $recommended;
         return $this;
     }
 

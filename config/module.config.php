@@ -6,7 +6,7 @@
 
 namespace MSBios\Market\Doctrine;
 
-use MSBios\Doctrine\Initializer\ObjectManagerInitializer;
+use MSBios\Doctrine\ObjectManagerInitializer;
 use Zend\Router\Http\Regex;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;

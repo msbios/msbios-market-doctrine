@@ -4,8 +4,18 @@
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
 namespace MSBios\Market\Doctrine;
+
+use MSBios\Market\Resource\Doctrine\Entity\Product;
+
 ?>
 
-<h2>Recommended products</h2>
+<?php if (count($this->recommended)): ?>
+    <h2>Recommended products</h2>
+    <?php /** @var Product $product */ ?>
+    <?php foreach ($this->recommended as $product): ?>
+        <?= $this->partial('partial/product', ['product' => $product]); ?>
+    <?php endforeach; ?>
+<?php endif; ?>
+
 <h2>New items</h2>
 <h2>Promotional goods</h2>
