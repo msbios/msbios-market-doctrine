@@ -26,7 +26,7 @@ use MSBios\Resource\Doctrine\TimestampableAwareTrait;
  * Class Product
  * @package MSBios\Market\Resource\Doctrine\Entity
  *
- * @ORM\Entity(repositoryClass="MSBios\Resource\Doctrine\EntityRepository")
+ * @ORM\Entity(repositoryClass="MSBios\Market\Resource\Doctrine\Repository\ProductRepository")
  * @ORM\Table(name="mrk_t_products")
  */
 class Product extends Entity implements

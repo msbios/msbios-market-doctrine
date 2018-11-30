@@ -11,6 +11,7 @@ use Zend\Form\Element;
 
 /** @var Product $product */
 $product = $this->product;
+
 ?>
 <div class="row" style="margin-bottom: 30px;">
     <div class="col-md-3">
@@ -37,10 +38,18 @@ $product = $this->product;
                         <?php /** @var Variant $variant */ ?>
                         <?php foreach ($variants as $variant): ?>
                             <li>
-                                <?= $this->formElement((new Element\Radio('variantid'))->setValueOptions([
-                                    $variant->getId() => $variant->getName()
-                                        . ' ' . $variant->getPrice()
-                                ])); ?>
+                                <?= $this->formRadio((new Element\Radio('variantid', [
+                                    'value_options' => [
+                                        $variant->getId() => ''
+                                    ]
+                                ]))); ?>
+                                <?= $variant->getName(); ?>
+                                <?php if ($variant->hasCompare()) : ?>
+                                    <span class="text-muted">
+                                        <del><?= $variant->getCompare(); ?></del>
+                                    </span>
+                                <?php endif; ?>
+                                <?= $variant->getPrice(); ?>
                             </li>
                         <?php endforeach; ?>
 

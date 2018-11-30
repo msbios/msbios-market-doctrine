@@ -3,6 +3,7 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
+
 namespace MSBios\Market\Doctrine;
 
 use MSBios\Market\Resource\Doctrine\Entity\Product;
@@ -18,4 +19,12 @@ use MSBios\Market\Resource\Doctrine\Entity\Product;
 <?php endif; ?>
 
 <h2>New items</h2>
-<h2>Promotional goods</h2>
+
+<?php if (count($this->promotional)): ?>
+    <h2>Promotional goods</h2>
+    <?php /** @var Product $product */ ?>
+    <?php foreach ($this->promotional as $product): ?>
+        <?= $this->partial('partial/product', ['product' => $product]); ?>
+    <?php endforeach; ?>
+<?php endif; ?>
+

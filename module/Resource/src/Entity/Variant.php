@@ -65,7 +65,7 @@ class Variant extends Entity implements
      *
      * @ORM\Column(type="decimal", precision=14, scale=2, nullable=false)
      */
-    private $compare;
+    private $compare = 0.00;
 
     /**
      * @return Product
@@ -116,6 +116,14 @@ class Variant extends Entity implements
     }
 
     /**
+     * @return bool
+     */
+    public function hasCompare()
+    {
+        return 0.00 != $this->getCompare();
+    }
+
+    /**
      * @return string
      */
     public function getCompare(): string
@@ -129,5 +137,14 @@ class Variant extends Entity implements
     public function setCompare(string $compare): void
     {
         $this->compare = $compare;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->getName()
+            . ' ' . $this->getPrice();
     }
 }
