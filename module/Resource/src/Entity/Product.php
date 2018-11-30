@@ -67,6 +67,13 @@ class Product extends Entity implements
     private $annotation;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="visible", type="boolean", options={"default" : 1})
+     */
+    private $visible = true;
+
+    /**
      * @var array
      *
      * @ORM\ManyToMany(targetEntity="Category")
@@ -150,6 +157,42 @@ class Product extends Entity implements
     public function setAnnotation(string $annotation)
     {
         $this->annotation = $annotation;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isVisible(): bool
+    {
+        return $this->visible;
+    }
+
+    /**
+     * @param bool $visible
+     * @return $this
+     */
+    public function setVisible(bool $visible)
+    {
+        $this->visible = $visible;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCategories(): array
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @param array $categories
+     * @return $this
+     */
+    public function setCategories(array $categories)
+    {
+        $this->categories = $categories;
         return $this;
     }
 
