@@ -12,6 +12,8 @@ use MSBios\Guard\Resource\Doctrine\BlameableAwareTrait;
 use MSBios\Market\Resource\Doctrine\Entity;
 use MSBios\Resource\Doctrine\NameableAwareInterface;
 use MSBios\Resource\Doctrine\NameableAwareTrait;
+use MSBios\Resource\Doctrine\OrderKeyableAwareInterface;
+use MSBios\Resource\Doctrine\OrderKeyableAwareTrait;
 use MSBios\Resource\Doctrine\RowStatusableAwareInterface;
 use MSBios\Resource\Doctrine\RowStatusableAwareTrait;
 use MSBios\Resource\Doctrine\TimestampableAwareInterface;
@@ -26,21 +28,16 @@ use MSBios\Resource\Doctrine\TimestampableAwareTrait;
  */
 class Feature extends Entity implements
     NameableAwareInterface,
+    OrderKeyableAwareInterface,
     TimestampableAwareInterface,
     BlameableAwareInterface,
     RowStatusableAwareInterface
 {
     use NameableAwareTrait;
+    use OrderKeyableAwareTrait;
     use TimestampableAwareTrait;
     use BlameableAwareTrait;
     use RowStatusableAwareTrait;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="order_key", type="integer", options={"default" : 0})
-     */
-    private $orderKey = 0;
 
     /**
      * @var boolean
@@ -55,24 +52,6 @@ class Feature extends Entity implements
      * @ORM\ManyToMany(targetEntity="Category", mappedBy="features")
      */
     private $categories;
-
-    /**
-     * @return int
-     */
-    public function getOrderKey(): int
-    {
-        return $this->orderKey;
-    }
-
-    /**
-     * @param int $orderKey
-     * @return $this
-     */
-    public function setOrderKey(int $orderKey)
-    {
-        $this->orderKey = $orderKey;
-        return $this;
-    }
 
     /**
      * @return bool

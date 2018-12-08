@@ -6,6 +6,7 @@
 namespace MSBios\Market\Doctrine;
 
 use MSBios\Market\Resource\Doctrine\Entity\ProductOption;
+use MSBios\Market\Resource\Doctrine\Entity\ProductRelation;
 
 ?>
 <h2><?= $this->product->getName(); ?></h2>
@@ -20,17 +21,7 @@ use MSBios\Market\Resource\Doctrine\Entity\ProductOption;
     </div>
 
     <div class="col-md-12">
-
-        <ul class="nav nav-tabs">
-            <li role="presentation" class="active">
-                <a href="#">
-                    Characteristics
-                </a>
-            </li>
-            <li role="presentation"><a href="#">Comments</a></li>
-        </ul>
-
-        <hr />
+        <h3>Characteristics</h3>
 
         <?php $options = $this->product->getOptions(); ?>
 
@@ -44,6 +35,13 @@ use MSBios\Market\Resource\Doctrine\Entity\ProductOption;
             <?php endforeach; ?>
 
         </table>
+
+        <h4>We also recommend to see</h4>
+
+        <?php /** @var ProductRelation $relation */ ?>
+        <?php foreach ($this->product->getRelations() as $relation): ?>
+            <?= $this->partial('partial/product', ['product' => $relation->getRelation()]); ?>
+        <?php endforeach; ?>
 
     </div>
 </div>

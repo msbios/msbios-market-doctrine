@@ -10,23 +10,27 @@ use Doctrine\ORM\Mapping as ORM;
 use MSBios\Guard\Resource\Doctrine\BlameableAwareInterface;
 use MSBios\Guard\Resource\Doctrine\BlameableAwareTrait;
 use MSBios\Market\Resource\Doctrine\Entity;
+use MSBios\Resource\Doctrine\OrderKeyableAwareInterface;
+use MSBios\Resource\Doctrine\OrderKeyableAwareTrait;
 use MSBios\Resource\Doctrine\RowStatusableAwareInterface;
 use MSBios\Resource\Doctrine\RowStatusableAwareTrait;
 use MSBios\Resource\Doctrine\TimestampableAwareInterface;
 use MSBios\Resource\Doctrine\TimestampableAwareTrait;
 
 /**
- * Class ProductOption
+ * Class ProductRelation
  * @package MSBios\Market\Resource\Doctrine\Entity
  *
  * @ORM\Entity
- * @ORM\Table(name="mrk_t_product_options")
+ * @ORM\Table(name="mrk_t_product_relations")
  */
-class ProductOption extends Entity implements
+class ProductRelation extends Entity implements
+    OrderKeyableAwareInterface,
     TimestampableAwareInterface,
     BlameableAwareInterface,
     RowStatusableAwareInterface
 {
+    use OrderKeyableAwareTrait;
     use TimestampableAwareTrait;
     use BlameableAwareTrait;
     use RowStatusableAwareTrait;
@@ -40,19 +44,12 @@ class ProductOption extends Entity implements
     private $product;
 
     /**
-     * @var Feature
+     * @var Product
      *
-     * @ORM\ManyToOne(targetEntity="Feature")
-     * @ORM\JoinColumn(name="featureid", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Product")
+     * @ORM\JoinColumn(name="relationid", referencedColumnName="id")
      */
-    private $feature;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="value", type="string", length=1024)
-     */
-    private $value;
+    private $relation;
 
     /**
      * @return Product
@@ -73,38 +70,20 @@ class ProductOption extends Entity implements
     }
 
     /**
-     * @return Feature
+     * @return Product
      */
-    public function getFeature(): Feature
+    public function getRelation(): Product
     {
-        return $this->feature;
+        return $this->relation;
     }
 
     /**
-     * @param Feature $feature
+     * @param Product $relation
      * @return $this
      */
-    public function setFeature(Feature $feature)
+    public function setRelation(Product $relation)
     {
-        $this->feature = $feature;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getValue(): string
-    {
-        return $this->value;
-    }
-
-    /**
-     * @param $value
-     * @return $this
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
+        $this->relation = $relation;
         return $this;
     }
 }

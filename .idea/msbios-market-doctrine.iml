@@ -55,6 +55,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/msbios" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/navigation" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/paginator-doctrine" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/resolver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/resource" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/resource-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/stdlib" />
