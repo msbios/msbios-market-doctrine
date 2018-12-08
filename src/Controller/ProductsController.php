@@ -6,7 +6,7 @@
 
 namespace MSBios\Market\Doctrine\Controller;
 
-use MSBios\Market\Doctrine\Mvc\AbstractActionController;
+use MSBios\Market\Doctrine\Mvc\Controller\AbstractActionController;
 use MSBios\Market\Resource\Doctrine\Entity\Product;
 use Zend\Paginator\Paginator;
 use Zend\View\Model\ViewModel;
@@ -17,10 +17,10 @@ use Zend\View\Model\ViewModel;
  */
 class ProductsController extends AbstractActionController
 {
-    /** @const PAGE_RANGE  */
+    /** @const PAGE_RANGE */
     const PAGE_RANGE = 4;
 
-    /** @const ITEM_COUNT_PER_PAGE  */
+    /** @const ITEM_COUNT_PER_PAGE */
     const ITEM_COUNT_PER_PAGE = 12;
 
     /**

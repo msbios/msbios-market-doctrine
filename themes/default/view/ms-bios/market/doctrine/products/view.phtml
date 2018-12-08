@@ -36,12 +36,15 @@ use MSBios\Market\Resource\Doctrine\Entity\ProductRelation;
 
         </table>
 
-        <h4>We also recommend to see</h4>
+        <?php $relations = $this->product->getRelations(); ?>
 
-        <?php /** @var ProductRelation $relation */ ?>
-        <?php foreach ($this->product->getRelations() as $relation): ?>
-            <?= $this->partial('partial/product', ['product' => $relation->getRelation()]); ?>
-        <?php endforeach; ?>
+        <?php if ($relations->count()): ?>
+            <h4>We also recommend to see</h4>
+            <?php /** @var ProductRelation $relation */ ?>
+            <?php foreach ($this->product->getRelations() as $relation): ?>
+                <?= $this->partial('partial/product', ['product' => $relation->getRelation()]); ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
 
     </div>
 </div>

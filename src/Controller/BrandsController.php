@@ -8,7 +8,7 @@ namespace MSBios\Market\Doctrine\Controller;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\QueryBuilder;
-use MSBios\Market\Doctrine\Mvc\AbstractActionController;
+use MSBios\Market\Doctrine\Mvc\Controller\AbstractActionController;
 use MSBios\Market\Resource\Doctrine\Entity\Brand;
 use MSBios\Market\Resource\Doctrine\Entity\Product;
 use MSBios\Paginator\Doctrine\Adapter\QueryBuilderPaginator;

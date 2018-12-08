@@ -12,21 +12,21 @@ namespace MSBios\Market\Doctrine;
  */
 class MarketManager
 {
-    /** @var CardService */
+    /** @var CartService */
     protected $cardService;
 
     /**
      * MarketManager constructor.
      *
-     * @param CardService $cardService
+     * @param CartService $cardService
      */
-    public function __construct(CardService $cardService)
+    public function __construct(CartService $cardService)
     {
         $this->cardService = $cardService;
     }
 
     /**
-     * @return CardService
+     * @return CartService
      */
     public function card()
     {

@@ -4,17 +4,17 @@
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
 
-namespace MSBios\Market\Doctrine\Mvc;
+namespace MSBios\Market\Doctrine\Mvc\Controller;
 
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
-use MSBios\Doctrine\ObjectManagerAwareTrait;
+use DoctrineModule\Persistence\ProvidesObjectManager;
 use Zend\Mvc\Controller\AbstractActionController as DefaultAbstractActionController;
 
 /**
  * Class AbstractActionController
- * @package MSBios\Market\Doctrine\Mvc
+ * @package MSBios\Market\Doctrine\Mvc\Controller
  */
 class AbstractActionController extends DefaultAbstractActionController implements ObjectManagerAwareInterface
 {
-    use ObjectManagerAwareTrait;
+    use ProvidesObjectManager;
 }

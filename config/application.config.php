@@ -6,6 +6,8 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'MSBios\Session',
+        'MSBios\Comment\Doctrine',
         'Zend\Hydrator',
         'Zend\Filter',
         'Zend\Validator',

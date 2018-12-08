@@ -3,14 +3,13 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
-
 namespace MSBios\Market\Doctrine;
 
 /**
- * Class CardService
+ * Interface VariantInterface
  * @package MSBios\Market\Doctrine
  */
-class CardService
+interface VariantInterface
 {
-    protected $storage;
+    // ...
 }

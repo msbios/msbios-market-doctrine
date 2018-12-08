@@ -144,6 +144,8 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
       <path value="$PROJECT_DIR$/vendor/msbios/resolver" />
+      <path value="$PROJECT_DIR$/vendor/msbios/session" />
+      <path value="$PROJECT_DIR$/vendor/msbios/comment-doctrine" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
