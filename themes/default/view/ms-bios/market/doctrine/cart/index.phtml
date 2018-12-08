@@ -49,3 +49,26 @@ namespace MSBios\Market\Doctrine;
 <?php endif; ?>
 
 <h2>Корзина</h2>
+
+<table class="table table-condensed table-striped">
+    <tr>
+        <td>Photo</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Amount</td>
+    </tr>
+<?php foreach ($this->order->getPurchases() as $purchase): ?>
+    <tr>
+        <td></td>
+        <td><?= $purchase->getVariant()->getProduct()->getName(); ?></td>
+        <td><?= $purchase->getVariant()->getPrice(); ?></td>
+        <td><?= $purchase->getAmount(); ?></td>
+    </tr>
+<?php endforeach; ?>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>

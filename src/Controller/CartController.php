@@ -9,6 +9,8 @@ namespace MSBios\Market\Doctrine\Controller;
 use Doctrine\Common\Persistence\ObjectManager;
 use MSBios\Market\Doctrine\CartServiceInterface;
 use MSBios\Market\Doctrine\Mvc\Controller\AbstractActionController;
+use MSBios\Market\Doctrine\OrderInterface;
+use MSBios\Market\Resource\Doctrine\Entity\Purchase;
 use MSBios\Market\Resource\Doctrine\Entity\Variant;
 use Zend\View\Model\ViewModel;
 
@@ -45,12 +47,17 @@ class CartController extends AbstractActionController
             /** @var array $data */
             $data = $this->params()->fromPost();
 
+
             /** @var Variant $variant */
             $variant = $dem->find(Variant::class, $data['variantid']);
 
-            var_dump($variant); die();
+            /** @var Purchase $purchase */
+            $purchase = (new Purchase)
+                ->setVariant($variant)
+                ->setAmount(1);
 
-            var_dump($this->params()->fromPost()); die();
+            $this->cartService
+                ->add($purchase);
 
             $this
                 ->flashMessenger()
@@ -61,6 +68,11 @@ class CartController extends AbstractActionController
                 ->toRoute($this->getEvent()->getRouteMatch()->getMatchedRouteName());
         }
 
-        return new ViewModel;
+        /** @var OrderInterface $order */
+        $order = $this->cartService->getOrder();
+
+        return new ViewModel([
+            'order' => $order
+        ]);
     }
 }

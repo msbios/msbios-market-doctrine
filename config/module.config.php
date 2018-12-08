@@ -91,7 +91,7 @@ return [
             Controller\BrandsController::class =>
                 InvokableFactory::class,
             Controller\CartController::class =>
-                InvokableFactory::class,
+                Factory\CartControllerFactory::class,
             Controller\CatalogController::class =>
                 InvokableFactory::class,
             Controller\IndexController::class =>
@@ -111,7 +111,11 @@ return [
 
     'service_manager' => [
         'factories' => [
-            // ...
+            CartService::class =>
+                Factory\CartServiceFactory::class,
+
+            Storage\CartObjectStorage::class =>
+                Factory\CartObjectStorageFactory::class
         ],
     ],
 

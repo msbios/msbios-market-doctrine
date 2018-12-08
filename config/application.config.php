@@ -6,8 +6,6 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
-        'MSBios\Session',
-        'MSBios\Comment\Doctrine',
         'Zend\Hydrator',
         'Zend\Filter',
         'Zend\Validator',
@@ -38,10 +36,12 @@ return [
         'MSBios\Application',
         'MSBios\Paginator\Doctrine',
         'MSBios\View',
+        'MSBios\Session',
 
         'DoctrineModule',
         'DoctrineORMModule',
 
+        'MSBios\Comment\Doctrine',
         'MSBios\Doctrine',
         'MSBios\Form',
         'MSBios\Form\Doctrine',
@@ -61,6 +61,7 @@ return [
         'MSBios\Guard\DeveloperTools',
         'MSBios\Test',
         'ZendDeveloperTools',
+        'SanSessionToolbar',
 
         'MSBios\Market\Doctrine',
         'MSBios\Market\CPanel\Doctrine',

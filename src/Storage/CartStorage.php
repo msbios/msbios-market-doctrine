@@ -4,16 +4,17 @@
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
 
-namespace MSBios\Market\Doctrine;
+namespace MSBios\Market\Doctrine\Storage;
 
 use Zend\Session\Container as SessionContainer;
 use Zend\Session\SessionManager;
+use Zend\Stdlib\ArrayUtils;
 
 /**
  * Class CartStorage
- * @package MSBios\Market\Doctrine
+ * @package MSBios\Market\Doctrine\Storage
  */
-class CartStorage
+class CartStorage implements CartStorageInterface
 {
     /**
      * Default session namespace
@@ -48,9 +49,6 @@ class CartStorage
 
     /**
      * CartStorage constructor.
-     *
-     * Sets session storage options and initializes session namespace object
-     *
      * @param null $namespace
      * @param null $member
      * @param SessionManager|null $manager
@@ -67,9 +65,7 @@ class CartStorage
     }
 
     /**
-     * Returns the session namespace
-     *
-     * @return string
+     * @return mixed|null
      */
     public function getNamespace()
     {
@@ -77,9 +73,7 @@ class CartStorage
     }
 
     /**
-     * Returns the name of the session object member
-     *
-     * @return string
+     * @return mixed|null
      */
     public function getMember()
     {
@@ -87,8 +81,6 @@ class CartStorage
     }
 
     /**
-     * Defined by Zend\Authentication\Storage\StorageInterface
-     *
      * @return bool
      */
     public function isEmpty()
@@ -97,8 +89,6 @@ class CartStorage
     }
 
     /**
-     * Defined by Zend\Authentication\Storage\StorageInterface
-     *
      * @return mixed
      */
     public function read()
@@ -107,10 +97,7 @@ class CartStorage
     }
 
     /**
-     * Defined by Zend\Authentication\Storage\StorageInterface
-     *
-     * @param  mixed $contents
-     * @return void
+     * @param $contents
      */
     public function write($contents)
     {
@@ -118,9 +105,7 @@ class CartStorage
     }
 
     /**
-     * Defined by Zend\Authentication\Storage\StorageInterface
      *
-     * @return void
      */
     public function clear()
     {

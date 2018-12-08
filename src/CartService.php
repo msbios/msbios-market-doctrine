@@ -6,7 +6,10 @@
 
 namespace MSBios\Market\Doctrine;
 
-use MSBios\Market\Resource\Doctrine\Entity\Product;
+use MSBios\Market\Doctrine\Storage\CartStorage;
+use MSBios\Market\Doctrine\Storage\CartStorageInterface;
+use MSBios\Market\Resource\Doctrine\Entity\Order;
+use MSBios\Market\Resource\Doctrine\Entity\Purchase;
 
 /**
  * Class CartService
@@ -33,6 +36,9 @@ class CartService implements CartServiceInterface
      */
     public function getStorage(): CartStorageInterface
     {
+        if (is_null($this->storage)) {
+            $this->setStorage(new CartStorage(self::class));
+        }
         return $this->storage;
     }
 
@@ -47,12 +53,21 @@ class CartService implements CartServiceInterface
     }
 
     /**
-     * @param VariantInterface $variant
+     * @param PurchaseInterface $purchase
      * @return $this
      */
-    public function add(VariantInterface $variant)
+    public function add(PurchaseInterface $purchase)
     {
-        r($variant); die();
+        $this->getStorage()->write($purchase);
         return $this;
+    }
+
+    /**
+     * @return Order
+     */
+    public function getOrder()
+    {
+        return (new Order)
+            ->setPurchases($this->getStorage()->read());
     }
 }

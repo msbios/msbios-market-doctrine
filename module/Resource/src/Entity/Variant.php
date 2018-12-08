@@ -7,12 +7,11 @@
 namespace MSBios\Market\Resource\Doctrine\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 use MSBios\Guard\Resource\Doctrine\BlameableAwareInterface;
 use MSBios\Guard\Resource\Doctrine\BlameableAwareTrait;
 use MSBios\Market\Resource\Doctrine\Entity;
-use MSBios\Resource\Doctrine\MetableAwareInterface;
-use MSBios\Resource\Doctrine\MetableAwareTrait;
+use MSBios\Market\Resource\Doctrine\PriceableAwareInterface;
+use MSBios\Market\Resource\Doctrine\PriceableAwareTrait;
 use MSBios\Resource\Doctrine\NameableAwareInterface;
 use MSBios\Resource\Doctrine\NameableAwareTrait;
 use MSBios\Resource\Doctrine\RowStatusableAwareInterface;
@@ -29,11 +28,13 @@ use MSBios\Resource\Doctrine\TimestampableAwareTrait;
  */
 class Variant extends Entity implements
     NameableAwareInterface,
+    PriceableAwareInterface,
     TimestampableAwareInterface,
     BlameableAwareInterface,
     RowStatusableAwareInterface
 {
     use NameableAwareTrait;
+    use PriceableAwareTrait;
     use TimestampableAwareTrait;
     use BlameableAwareTrait;
     use RowStatusableAwareTrait;
@@ -52,13 +53,6 @@ class Variant extends Entity implements
      * @ORM\Column(name="code", length=128, nullable=false)
      */
     private $code;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(type="decimal", precision=14, scale=2)
-     */
-    private $price;
 
     /**
      * @var string
@@ -97,22 +91,6 @@ class Variant extends Entity implements
     public function setCode(string $code): void
     {
         $this->code = $code;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPrice(): string
-    {
-        return $this->price;
-    }
-
-    /**
-     * @param string $price
-     */
-    public function setPrice(string $price): void
-    {
-        $this->price = $price;
     }
 
     /**
