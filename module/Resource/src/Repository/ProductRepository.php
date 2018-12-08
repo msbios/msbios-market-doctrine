@@ -63,11 +63,11 @@ class ProductRepository extends EntityRepository
             ->join(Variant::class, 'v', Join::WITH, $qb->expr()->eq('v.product', 'p.id'))
             ->where($qb->expr()->neq('v.compare', '0.00'));
 
-        if (!is_null($limit)) {
+        if (! is_null($limit)) {
             $qb->setMaxResults($limit);
         }
 
-        if (!is_null($offset)) {
+        if (! is_null($offset)) {
             $qb->setFirstResult($offset);
         }
 
@@ -75,5 +75,4 @@ class ProductRepository extends EntityRepository
             ->getQuery()
             ->getResult();
     }
-
 }

@@ -54,7 +54,7 @@ class CatalogController extends AbstractActionController
             'rowStatus' => true
         ]);
 
-        if (!$category) {
+        if (! $category) {
             return $this->notFoundAction();
         }
 
@@ -77,11 +77,10 @@ class CatalogController extends AbstractActionController
          * @return QueryBuilderPaginator
          */
         $fetchBy = function (QueryBuilder $qb) use ($categories) {
-
             $qb
-                ->join('o.categories', 'c', 'WITH')
+                ->join('p.categories', 'c', 'WITH')
                 ->where($qb->expr()->in('c.id', ':categories'))
-                ->andWhere($qb->expr()->eq('o.rowStatus', ':rowStatus'))
+                ->andWhere($qb->expr()->eq('p.rowStatus', ':rowStatus'))
                 ->setParameter('categories', $categories)
                 ->setParameter('rowStatus', true);
 
@@ -130,7 +129,7 @@ class CatalogController extends AbstractActionController
             'rowStatus' => true
         ]);
 
-        if (!$brand || !$category) {
+        if (! $brand || ! $category) {
             return $this->notFoundAction();
         }
 
@@ -142,7 +141,7 @@ class CatalogController extends AbstractActionController
         /** @var array $brands */
         $brands = $dem
             ->getRepository(Brand::class)
-            ->findAll();
+            ->findBy(['id' => $brand]);
 
         /**
          * @param QueryBuilder $qb
@@ -150,7 +149,7 @@ class CatalogController extends AbstractActionController
          */
         $fetchBy = function (QueryBuilder $qb) use ($brand) {
 
-            $qb->where($qb->expr()->eq('o.brand', ':brand'))
+            $qb->where($qb->expr()->eq('p.brand', ':brand'))
                 ->setParameter('brand', $brand);
 
             return new QueryBuilderPaginator($qb);

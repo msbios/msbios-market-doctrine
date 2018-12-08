@@ -6,8 +6,6 @@
 namespace MSBios\Market\Doctrine;
 
 use MSBios\Market\Resource\Doctrine\Entity\Product;
-use MSBios\Market\Resource\Doctrine\Entity\Variant;
-use Zend\Form\Element;
 
 /** @var Product $product */
 $product = $this->product;
@@ -24,50 +22,6 @@ $product = $this->product;
         </a>
         <?= $product->getAnnotation(); ?>
 
-        <?php
-        /** @var array $variants */
-        $variants = $product->getVariants();
-        ?>
-        <?php if (count($variants)) : ?>
-            <form action="<?= $this->url('home/cart'); ?>" method="post">
-                <ul>
-                    <?php if (count($variants) > 1) : ?>
-
-                        <?php /** @var Variant $variant */ ?>
-                        <?php foreach ($variants as $variant): ?>
-                            <li>
-                                <?= $this->formRadio((new Element\Radio('variantid', [
-                                    'value_options' => [
-                                        $variant->getId() => ''
-                                    ]
-                                ]))); ?>
-                                <?= $variant->getName(); ?>
-                                <?php if ($variant->hasCompare()) : ?>
-                                    <span class="text-muted">
-                                        <del><?= $variant->getCompare(); ?></del>
-                                    </span>
-                                <?php endif; ?>
-                                <?= $variant->getPrice(); ?>
-                            </li>
-                        <?php endforeach; ?>
-
-                    <?php else: ?>
-                        <?php /** @var Variant $variant */ ?>
-                        <?php foreach ($variants as $variant): ?>
-                            <li>
-                                <?= $variant->getPrice(); ?>
-                                <?= $this->formElement((new Element\Hidden('variantid'))->setAttributes([
-                                    'value' => $variant->getId()
-                                ])); ?>
-                            </li>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                </ul>
-                <?= $this->formElement((new Element\Hidden('productid'))->setAttributes([
-                    'value' => $product->getId()
-                ])); ?>
-                <button type="submit" class="btn btn-default">В корзину</button>
-            </form>
-        <?php endif; ?>
+        <?= $this->partial('partial/variants', ['product' => $product]); ?>
     </div>
 </div>

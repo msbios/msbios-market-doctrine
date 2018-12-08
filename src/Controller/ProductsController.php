@@ -59,7 +59,7 @@ class ProductsController extends AbstractActionController
         $product = $this->getRepository()
             ->findOneBy(['id' => $this->params()->fromRoute('id'), 'rowStatus' => true]);
 
-        if (!$product) {
+        if (! $product) {
             return $this->notFoundAction();
         }
 

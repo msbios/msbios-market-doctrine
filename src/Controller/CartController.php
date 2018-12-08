@@ -21,7 +21,6 @@ class CartController extends AbstractActionController
     public function indexAction()
     {
         if ($this->getRequest()->isPost()) {
-
             $this
                 ->flashMessenger()
                 ->addSuccessMessage('Product was successfully added to cart.');

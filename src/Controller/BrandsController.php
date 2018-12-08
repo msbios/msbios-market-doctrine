@@ -34,7 +34,7 @@ class BrandsController extends AbstractActionController
             ->getRepository(Brand::class)
             ->findOneBy(['id' => $this->params()->fromRoute('id'), 'rowStatus' => true]);
 
-        if (!$brand) {
+        if (! $brand) {
             return $this->notFoundAction();
         }
 
