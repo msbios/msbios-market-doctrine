@@ -68,6 +68,19 @@ class Category extends Entity implements
     private $categories;
 
     /**
+     * @var array
+     *
+     * @ORM\ManyToMany(targetEntity="Feature")
+     * @ORM\OrderBy({"name"="ASC"})
+     * @ORM\JoinTable(
+     *     name="mrk_t_categories_features",
+     *     joinColumns={@ORM\JoinColumn(name="categoryid", referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="featureid", referencedColumnName="id")}
+     * )
+     */
+    private $features;
+
+    /**
      * Category constructor.
      */
     public function __construct()
@@ -126,6 +139,24 @@ class Category extends Entity implements
     public function setCategories(array $categories)
     {
         $this->categories = $categories;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getFeatures(): array
+    {
+        return $this->features;
+    }
+
+    /**
+     * @param array $features
+     * @return $this
+     */
+    public function setFeatures(array $features)
+    {
+        $this->features = $features;
         return $this;
     }
 }

@@ -105,11 +105,23 @@ class Product extends Entity implements
     private $variants;
 
     /**
+     * @var array
+     *
+     * @ORM\OneToMany(
+     *   targetEntity="ProductOption",
+     *   mappedBy="product",
+     *   cascade={"persist", "remove"}
+     * )
+     */
+    private $options;
+
+    /**
      * Product constructor.
      */
     public function __construct()
     {
         $this->categories = new ArrayCollection;
+        $this->variants = new ArrayCollection;
         $this->variants = new ArrayCollection;
     }
 
@@ -236,6 +248,24 @@ class Product extends Entity implements
     public function setVariants(array $variants)
     {
         $this->variants = $variants;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
+     * @param array $options
+     * @return $this
+     */
+    public function setOptions(array $options)
+    {
+        $this->options = $options;
         return $this;
     }
 }

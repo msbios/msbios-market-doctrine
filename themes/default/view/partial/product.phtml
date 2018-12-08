@@ -21,7 +21,6 @@ $product = $this->product;
             <?= $product->getName(); ?>
         </a>
         <?= $product->getAnnotation(); ?>
-
         <?= $this->partial('partial/variants', ['product' => $product]); ?>
     </div>
 </div>

@@ -5,6 +5,8 @@
  */
 namespace MSBios\Market\Doctrine;
 
+use MSBios\Market\Resource\Doctrine\Entity\ProductOption;
+
 ?>
 <h2><?= $this->product->getName(); ?></h2>
 
@@ -14,5 +16,34 @@ namespace MSBios\Market\Doctrine;
     </div>
     <div class="col-md-8">
         <?= $this->product->getContent(); ?>
+        <?= $this->partial('partial/variants', ['product' => $this->product]); ?>
+    </div>
+
+    <div class="col-md-12">
+
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active">
+                <a href="#">
+                    Characteristics
+                </a>
+            </li>
+            <li role="presentation"><a href="#">Comments</a></li>
+        </ul>
+
+        <hr />
+
+        <?php $options = $this->product->getOptions(); ?>
+
+        <table class="table table-condensed table-striped">
+            <?php /** @var ProductOption $option */ ?>
+            <?php foreach ($options as $option): ?>
+                <tr class="row">
+                    <th class="col-md-4"><?= $option->getFeature()->getName(); ?></th>
+                    <td class="col-md-8"><?= $option->getValue(); ?></td>
+                </tr>
+            <?php endforeach; ?>
+
+        </table>
+
     </div>
 </div>
