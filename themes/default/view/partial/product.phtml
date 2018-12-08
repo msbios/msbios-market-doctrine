@@ -30,9 +30,7 @@ $product = $this->product;
         ?>
         <?php if (count($variants)) : ?>
             <form action="<?= $this->url('home/cart'); ?>" method="post">
-
                 <ul>
-
                     <?php if (count($variants) > 1) : ?>
 
                         <?php /** @var Variant $variant */ ?>

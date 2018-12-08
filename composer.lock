@@ -374,16 +374,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.8.0",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "5140a64c08b4b607b9bedaae0cedd26f04a0e621"
+                "reference": "21fdabe2fc01e004e1966f200d900554876bc63c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/5140a64c08b4b607b9bedaae0cedd26f04a0e621",
-                "reference": "5140a64c08b4b607b9bedaae0cedd26f04a0e621",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/21fdabe2fc01e004e1966f200d900554876bc63c",
+                "reference": "21fdabe2fc01e004e1966f200d900554876bc63c",
                 "shasum": ""
             },
             "require": {
@@ -393,11 +393,10 @@
                 "php": "^7.1"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^4.0",
+                "doctrine/coding-standard": "^5.0",
                 "jetbrains/phpstorm-stubs": "^2018.1.2",
                 "phpstan/phpstan": "^0.10.1",
-                "phpunit/phpunit": "^7.1.2",
-                "phpunit/phpunit-mock-objects": "!=3.2.4,!=3.2.5",
+                "phpunit/phpunit": "^7.4",
                 "symfony/console": "^2.0.5|^3.0|^4.0",
                 "symfony/phpunit-bridge": "^3.4.5|^4.0.5"
             },
@@ -410,13 +409,13 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8.x-dev",
+                    "dev-master": "2.9.x-dev",
                     "dev-develop": "3.0.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\DBAL\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\DBAL\\": "lib/Doctrine/DBAL"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -441,15 +440,19 @@
                     "email": "jonwage@gmail.com"
                 }
             ],
-            "description": "Database Abstraction Layer",
-            "homepage": "http://www.doctrine-project.org",
+            "description": "Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.",
+            "homepage": "https://www.doctrine-project.org/projects/dbal.html",
             "keywords": [
+                "abstraction",
                 "database",
                 "dbal",
+                "mysql",
                 "persistence",
+                "pgsql",
+                "php",
                 "queryobject"
             ],
-            "time": "2018-07-13T03:16:35+00:00"
+            "time": "2018-12-04T04:39:48+00:00"
         },
         {
             "name": "doctrine/doctrine-module",
@@ -1770,16 +1773,16 @@
         },
         {
             "name": "msbios/doctrine",
-            "version": "v1.0.12",
+            "version": "v1.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-doctrine.git",
-                "reference": "3e267e5dcdc82fec059429674912c4f9f9c8341c"
+                "reference": "714e09046f2e96d84dd54d8d5686734325b121fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-doctrine/zipball/3e267e5dcdc82fec059429674912c4f9f9c8341c",
-                "reference": "3e267e5dcdc82fec059429674912c4f9f9c8341c",
+                "url": "https://api.github.com/repos/msbios/msbios-doctrine/zipball/714e09046f2e96d84dd54d8d5686734325b121fb",
+                "reference": "714e09046f2e96d84dd54d8d5686734325b121fb",
                 "shasum": ""
             },
             "require": {
@@ -1819,7 +1822,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-11-26T19:34:28+00:00"
+            "time": "2018-12-04T16:34:01+00:00"
         },
         {
             "name": "msbios/form",
@@ -2560,6 +2563,50 @@
             "time": "2018-11-26T20:33:36+00:00"
         },
         {
+            "name": "msbios/resolver",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/msbios/msbios-resolver.git",
+                "reference": "1297753c77274bf3e96da39acb762ed5fb28dba4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/msbios/msbios-resolver/zipball/1297753c77274bf3e96da39acb762ed5fb28dba4",
+                "reference": "1297753c77274bf3e96da39acb762ed5fb28dba4",
+                "shasum": ""
+            },
+            "require": {
+                "msbios/msbios": "^1.0"
+            },
+            "require-dev": {
+                "msbios/debug": "^1.0",
+                "msbios/test": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MSBios\\Resolver\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Judzhin Miles",
+                    "email": "info@msbios.com"
+                }
+            ],
+            "description": "MSBios Resolver",
+            "homepage": "https://github.com/msbios/msbios-resolver",
+            "keywords": [
+                "php"
+            ],
+            "time": "2018-12-05T14:11:00+00:00"
+        },
+        {
             "name": "msbios/resource",
             "version": "v1.0.21",
             "source": {
@@ -2609,16 +2656,16 @@
         },
         {
             "name": "msbios/resource-doctrine",
-            "version": "v1.0.42",
+            "version": "v1.0.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-resource-doctrine.git",
-                "reference": "344cae395fe81d6e77c66989142812fd71bcda86"
+                "reference": "b8de238f75f977e6d7354cf37de96ebed6bd4270"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-resource-doctrine/zipball/344cae395fe81d6e77c66989142812fd71bcda86",
-                "reference": "344cae395fe81d6e77c66989142812fd71bcda86",
+                "url": "https://api.github.com/repos/msbios/msbios-resource-doctrine/zipball/b8de238f75f977e6d7354cf37de96ebed6bd4270",
+                "reference": "b8de238f75f977e6d7354cf37de96ebed6bd4270",
                 "shasum": ""
             },
             "require": {
@@ -2659,7 +2706,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-11-26T21:01:30+00:00"
+            "time": "2018-12-04T16:41:24+00:00"
         },
         {
             "name": "msbios/stdlib",
@@ -2711,28 +2758,30 @@
         },
         {
             "name": "msbios/theme",
-            "version": "v1.0.12",
+            "version": "v1.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-theme.git",
-                "reference": "1ddd3e3cb2fe88071b982280f32517d17135d4ca"
+                "reference": "44a3ec1dea0ec7e72f425a3205a7dabfe8cbd139"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-theme/zipball/1ddd3e3cb2fe88071b982280f32517d17135d4ca",
-                "reference": "1ddd3e3cb2fe88071b982280f32517d17135d4ca",
+                "url": "https://api.github.com/repos/msbios/msbios-theme/zipball/44a3ec1dea0ec7e72f425a3205a7dabfe8cbd139",
+                "reference": "44a3ec1dea0ec7e72f425a3205a7dabfe8cbd139",
                 "shasum": ""
             },
             "require": {
                 "msbios/assetic": "^1.0",
                 "msbios/i18n": "^1.0",
+                "msbios/resolver": "^1.0",
                 "msbios/stdlib": "^1.0",
                 "msbios/widget": "^1.0"
             },
             "require-dev": {
                 "msbios/debug": "^1.0",
                 "msbios/navigation": "^1.0",
-                "msbios/test": "^1.0"
+                "msbios/test": "^1.0",
+                "zendframework/zend-mvc": "^3.1"
             },
             "type": "library",
             "extra": {
@@ -2760,7 +2809,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-04-05T09:39:36+00:00"
+            "time": "2018-12-05T14:30:02+00:00"
         },
         {
             "name": "msbios/validator",
@@ -2864,16 +2913,16 @@
         },
         {
             "name": "msbios/widget",
-            "version": "v1.0.7",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-widget.git",
-                "reference": "e4f74499ea88fa2a673da752d4adb74056c9a290"
+                "reference": "7b8ca865c35116e4aa5da1c96bd69a49c3ee23ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-widget/zipball/e4f74499ea88fa2a673da752d4adb74056c9a290",
-                "reference": "e4f74499ea88fa2a673da752d4adb74056c9a290",
+                "url": "https://api.github.com/repos/msbios/msbios-widget/zipball/7b8ca865c35116e4aa5da1c96bd69a49c3ee23ea",
+                "reference": "7b8ca865c35116e4aa5da1c96bd69a49c3ee23ea",
                 "shasum": ""
             },
             "require": {
@@ -2908,37 +2957,33 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-11-01T15:57:27+00:00"
+            "time": "2018-12-03T12:36:35+00:00"
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.17",
+            "version": "v9.99.99",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "29af24f25bab834fcbb38ad2a69fa93b867e070d"
+                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/29af24f25bab834fcbb38ad2a69fa93b867e070d",
-                "reference": "29af24f25bab834fcbb38ad2a69fa93b867e070d",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
+                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.0"
+                "php": "^7"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*|5.*"
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
             },
             "suggest": {
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
             },
             "type": "library",
-            "autoload": {
-                "files": [
-                    "lib/random.php"
-                ]
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -2957,7 +3002,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-07-04T16:31:37+00:00"
+            "time": "2018-07-02T15:55:56+00:00"
         },
         {
             "name": "patchwork/utf8",
@@ -3163,7 +3208,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -3232,16 +3277,16 @@
         },
         {
             "name": "symfony/contracts",
-            "version": "v1.0.0",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/contracts.git",
-                "reference": "4a33574d5771f4b04334cd4f7d43de96a92efb62"
+                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/contracts/zipball/4a33574d5771f4b04334cd4f7d43de96a92efb62",
-                "reference": "4a33574d5771f4b04334cd4f7d43de96a92efb62",
+                "url": "https://api.github.com/repos/symfony/contracts/zipball/1aa7ab2429c3d594dd70689604b5cf7421254cdf",
+                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf",
                 "shasum": ""
             },
             "require": {
@@ -3296,7 +3341,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2018-10-31T08:00:32+00:00"
+            "time": "2018-12-05T08:06:11+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -3359,7 +3404,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.19",
+            "version": "v3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -4349,21 +4394,21 @@
         },
         {
             "name": "zendframework/zend-math",
-            "version": "3.1.1",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-math.git",
-                "reference": "0aa5ec1b3132dd7d749d4673d7bdc7ab6b2d202a"
+                "reference": "07e43d87fd5c7edc4f54121b9a4625eb10e4b726"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-math/zipball/0aa5ec1b3132dd7d749d4673d7bdc7ab6b2d202a",
-                "reference": "0aa5ec1b3132dd7d749d4673d7bdc7ab6b2d202a",
+                "url": "https://api.github.com/repos/zendframework/zend-math/zipball/07e43d87fd5c7edc4f54121b9a4625eb10e4b726",
+                "reference": "07e43d87fd5c7edc4f54121b9a4625eb10e4b726",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "paragonie/random_compat": "^2.0.11",
+                "paragonie/random_compat": "^2.0.11 || 9.99.99",
                 "php": "^5.6 || ^7.0"
             },
             "require-dev": {
@@ -4377,8 +4422,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev",
-                    "dev-develop": "3.2.x-dev"
+                    "dev-master": "3.2.x-dev",
+                    "dev-develop": "3.3.x-dev"
                 }
             },
             "autoload": {
@@ -4396,7 +4441,7 @@
                 "math",
                 "zf"
             ],
-            "time": "2018-07-10T19:00:33+00:00"
+            "time": "2018-12-04T15:45:09+00:00"
         },
         {
             "name": "zendframework/zend-modulemanager",
@@ -6564,16 +6609,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.4.4",
+            "version": "7.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b1be2c8530c4c29c3519a052c9fb6cee55053bbd"
+                "reference": "520723129e2b3fc1dc4c0953e43c9d40e1ecb352"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b1be2c8530c4c29c3519a052c9fb6cee55053bbd",
-                "reference": "b1be2c8530c4c29c3519a052c9fb6cee55053bbd",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/520723129e2b3fc1dc4c0953e43c9d40e1ecb352",
+                "reference": "520723129e2b3fc1dc4c0953e43c9d40e1ecb352",
                 "shasum": ""
             },
             "require": {
@@ -6594,7 +6639,7 @@
                 "phpunit/php-timer": "^2.0",
                 "sebastian/comparator": "^3.0",
                 "sebastian/diff": "^3.0",
-                "sebastian/environment": "^3.1 || ^4.0",
+                "sebastian/environment": "^4.0",
                 "sebastian/exporter": "^3.1",
                 "sebastian/global-state": "^2.0",
                 "sebastian/object-enumerator": "^3.0.3",
@@ -6618,7 +6663,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "7.4-dev"
+                    "dev-master": "7.5-dev"
                 }
             },
             "autoload": {
@@ -6644,7 +6689,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-11-14T16:52:02+00:00"
+            "time": "2018-12-07T07:08:12+00:00"
         },
         {
             "name": "san/san-session-toolbar",
@@ -7321,16 +7366,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "10ba96d42cc9a482bce05c8179f06e24e665c920"
+                "reference": "005d9a083d03f588677d15391a716b1ac9b887c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/10ba96d42cc9a482bce05c8179f06e24e665c920",
-                "reference": "10ba96d42cc9a482bce05c8179f06e24e665c920",
+                "url": "https://api.github.com/repos/symfony/config/zipball/005d9a083d03f588677d15391a716b1ac9b887c0",
+                "reference": "005d9a083d03f588677d15391a716b1ac9b887c0",
                 "shasum": ""
             },
             "require": {
@@ -7380,20 +7425,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2018-11-26T10:55:26+00:00"
+            "time": "2018-11-30T22:21:14+00:00"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "c2061bce5915f853a619f02ce1278ca83156d375"
+                "reference": "e4adc57a48d3fa7f394edfffa9e954086d7740e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/c2061bce5915f853a619f02ce1278ca83156d375",
-                "reference": "c2061bce5915f853a619f02ce1278ca83156d375",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/e4adc57a48d3fa7f394edfffa9e954086d7740e5",
+                "reference": "e4adc57a48d3fa7f394edfffa9e954086d7740e5",
                 "shasum": ""
             },
             "require": {
@@ -7453,11 +7498,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-11-28T18:24:18+00:00"
+            "time": "2018-12-02T15:59:36+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",

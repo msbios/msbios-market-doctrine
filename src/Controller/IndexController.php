@@ -12,7 +12,6 @@ use Doctrine\Common\Persistence\ObjectRepository;
 use MSBios\Market\Doctrine\Mvc\AbstractActionController;
 use MSBios\Market\Resource\Doctrine\Entity\Product;
 use MSBios\Market\Resource\Doctrine\Repository\ProductRepository;
-use Zend\Paginator\Paginator;
 use Zend\View\Model\ViewModel;
 
 /**
@@ -36,11 +35,15 @@ class IndexController extends AbstractActionController
         /** @var ArrayCollection $recommended */
         $recommended = $repository->findRecommended();
 
+        /** @var ArrayCollection $novelty */
+        $novelty = $repository->findNovelty(2);
+
         /** @var ArrayCollection $promotional */
         $promotional = $repository->findPromotional();
 
         return new ViewModel([
             'recommended' => $recommended,
+            'novelty' => $novelty,
             'promotional' => $promotional
         ]);
     }

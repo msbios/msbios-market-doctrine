@@ -36,6 +36,19 @@ class ProductRepository extends EntityRepository
     }
 
     /**
+     * @param null $limit
+     * @param null $offset
+     * @return array
+     */
+    public function findNovelty($limit = null, $offset = null)
+    {
+        return parent::findBy([
+            'visible' => true,
+            'rowStatus' => true
+        ], ['createdAt' => 'DESC'], $limit, $offset);
+    }
+
+    /**
      * @param array|null $orderBy
      * @param null $limit
      * @param null $offset

@@ -18,7 +18,13 @@ use MSBios\Market\Resource\Doctrine\Entity\Product;
     <?php endforeach; ?>
 <?php endif; ?>
 
-<h2>New items</h2>
+<?php if (count($this->novelty)): ?>
+    <h2>New items</h2>
+    <?php /** @var Product $product */ ?>
+    <?php foreach ($this->novelty as $product): ?>
+        <?= $this->partial('partial/product', ['product' => $product]); ?>
+    <?php endforeach; ?>
+<?php endif; ?>
 
 <?php if (count($this->promotional)): ?>
     <h2>Promotional goods</h2>
