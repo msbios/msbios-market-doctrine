@@ -6,6 +6,7 @@
 
 namespace MSBios\Market\Resource\Doctrine\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use MSBios\Guard\Resource\Doctrine\BlameableAwareInterface;
 use MSBios\Guard\Resource\Doctrine\BlameableAwareTrait;
@@ -62,6 +63,21 @@ class Variant extends Entity implements
      * @ORM\Column(type="decimal", precision=14, scale=2, nullable=false)
      */
     private $compare = 0.00;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="Purchase", mappedBy="variant", cascade={"persist", "remove"})
+     */
+    private $purchases;
+
+    /**
+     * Variant constructor.
+     */
+    public function __construct()
+    {
+        $this->purchases = new ArrayCollection;
+    }
 
     /**
      * @return Product

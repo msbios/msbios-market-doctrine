@@ -66,8 +66,10 @@ class CartController extends AbstractActionController
                 /** @var EntityInterface|Order $entity */
                 $entity = $form->getData();
 
-                r($entity->getPurchases());
-                die();
+                /** @var ObjectManager $dem */
+                $dem = $this->getObjectManager();
+                $dem->persist($entity);
+                $dem->flush();
 
                 $this
                     ->flashMessenger()

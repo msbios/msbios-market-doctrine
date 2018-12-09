@@ -22,8 +22,6 @@ class OrderForm extends Form
      */
     public function init()
     {
-        parent::init();
-
         $this->add([
             'type' => Element\Text::class,
             'name' => 'price'

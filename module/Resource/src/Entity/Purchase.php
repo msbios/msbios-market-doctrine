@@ -68,9 +68,9 @@ class Purchase extends Entity implements
     }
 
     /**
-     * @return Variant
+     * @return \MSBios\Market\Doctrine\VariantInterface|Variant
      */
-    public function getVariant(): Variant
+    public function getVariant()
     {
         return $this->variant;
     }
