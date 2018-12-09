@@ -6,11 +6,16 @@
 
 namespace MSBios\Market\Doctrine;
 
+use MSBios\Market\Resource\Doctrine\AmountableAwareInterface;
+use MSBios\Market\Resource\Doctrine\PriceableAwareInterface;
+
 /**
  * Interface OrderInterface
  * @package MSBios\Market\Doctrine
  */
-interface OrderInterface
+interface OrderInterface extends
+    PriceableAwareInterface,
+    AmountableAwareInterface
 {
     // ...
 }

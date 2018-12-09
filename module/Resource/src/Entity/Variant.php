@@ -9,6 +9,7 @@ namespace MSBios\Market\Resource\Doctrine\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use MSBios\Guard\Resource\Doctrine\BlameableAwareInterface;
 use MSBios\Guard\Resource\Doctrine\BlameableAwareTrait;
+use MSBios\Market\Doctrine\VariantInterface;
 use MSBios\Market\Resource\Doctrine\Entity;
 use MSBios\Market\Resource\Doctrine\PriceableAwareInterface;
 use MSBios\Market\Resource\Doctrine\PriceableAwareTrait;
@@ -27,6 +28,7 @@ use MSBios\Resource\Doctrine\TimestampableAwareTrait;
  * @ORM\Table(name="mrk_t_variants")
  */
 class Variant extends Entity implements
+    VariantInterface,
     NameableAwareInterface,
     PriceableAwareInterface,
     TimestampableAwareInterface,

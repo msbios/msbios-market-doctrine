@@ -18,7 +18,7 @@ trait PriceableAwareTrait
      *
      * @ORM\Column(type="decimal", precision=14, scale=2)
      */
-    private $price;
+    private $price = 0.00;
 
     /**
      * @return float
@@ -26,13 +26,17 @@ trait PriceableAwareTrait
     public function getPrice(): float
     {
         return $this->price;
+
+        return number_format(
+            round((float)$this->price, 2), 2
+        );
     }
 
     /**
-     * @param string $price
+     * @param $price
      * @return $this
      */
-    public function setPrice(string $price)
+    public function setPrice($price)
     {
         $this->price = $price;
         return $this;

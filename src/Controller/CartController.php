@@ -8,6 +8,8 @@ namespace MSBios\Market\Doctrine\Controller;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use MSBios\Market\Doctrine\CartServiceInterface;
+use MSBios\Market\Doctrine\MarketManager;
+use MSBios\Market\Doctrine\MarketManagerInterface;
 use MSBios\Market\Doctrine\Mvc\Controller\AbstractActionController;
 use MSBios\Market\Doctrine\OrderInterface;
 use MSBios\Market\Resource\Doctrine\Entity\Purchase;
@@ -20,18 +22,18 @@ use Zend\View\Model\ViewModel;
  */
 class CartController extends AbstractActionController
 {
-    /** @var CartServiceInterface */
-    protected $cartService;
+    /** @var MarketManagerInterface */
+    protected $marketManager;
 
     /**
      * CartController constructor.
      * @param ObjectManager $objectManager
-     * @param CartServiceInterface $cartService
+     * @param MarketManagerInterface $marketManager
      */
-    public function __construct(ObjectManager $objectManager, CartServiceInterface $cartService)
+    public function __construct(ObjectManager $objectManager, MarketManagerInterface $marketManager)
     {
         $this->setObjectManager($objectManager);
-        $this->cartService = $cartService;
+        $this->marketManager = $marketManager;
     }
 
     /**
@@ -41,27 +43,22 @@ class CartController extends AbstractActionController
     {
         if ($this->getRequest()->isPost()) {
 
-            /** @var ObjectManager $dem */
-            $dem = $this->getObjectManager();
-
-            /** @var array $data */
-            $data = $this->params()->fromPost();
-
-
-            /** @var Variant $variant */
-            $variant = $dem->find(Variant::class, $data['variantid']);
-
-            /** @var Purchase $purchase */
-            $purchase = (new Purchase)
-                ->setVariant($variant)
-                ->setAmount(1);
-
-            $this->cartService
-                ->add($purchase);
-
-            $this
-                ->flashMessenger()
-                ->addSuccessMessage('Product was successfully added to cart.');
+            // /** @var ObjectManager $dem */
+            // $dem = $this->getObjectManager();
+            //
+            // /** @var array $data */
+            // $data = $this->params()->fromPost();
+            //
+            // /** @var Variant $variant */
+            // $variant = $dem->find(Variant::class, $data['variantid']);
+            //
+            // $this
+            //     ->marketManager
+            //     ->addVariant($variant);
+            //
+            // $this
+            //     ->flashMessenger()
+            //     ->addSuccessMessage('Product was successfully added to cart.');
 
             return $this
                 ->redirect()
@@ -69,10 +66,44 @@ class CartController extends AbstractActionController
         }
 
         /** @var OrderInterface $order */
-        $order = $this->cartService->getOrder();
+        $order = $this->marketManager->getOrder();
 
         return new ViewModel([
             'order' => $order
         ]);
     }
+
+    /**
+     * @return ViewModel
+     */
+    public function addAction()
+    {
+        if ($this->getRequest()->isPost()) {
+
+            /** @var ObjectManager $dem */
+            $dem = $this->getObjectManager();
+
+            /** @var array $data */
+            $data = $this->params()->fromPost();
+
+            /** @var Variant $variant */
+            $variant = $dem->find(Variant::class, $data['variantid']);
+
+            $this->marketManager
+                ->addVariant($variant);
+
+            $this
+                ->flashMessenger()
+                ->addSuccessMessage('Product was successfully added to cart.');
+
+            return $this
+                ->redirect()
+                ->toRoute('home/cart');
+        }
+
+        return $this
+            ->redirect()
+            ->toRoute('home');
+    }
+
 }

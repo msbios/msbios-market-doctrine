@@ -6,11 +6,14 @@
 
 namespace MSBios\Market\Doctrine;
 
+use MSBios\Market\Resource\Doctrine\Entity\Order;
+use MSBios\Market\Resource\Doctrine\Entity\Purchase;
+
 /**
  * Class MarketManager
  * @package MSBios\Market\Doctrine
  */
-class MarketManager
+class MarketManager implements MarketManagerInterface
 {
     /** @var CartService */
     protected $cardService;
@@ -26,10 +29,61 @@ class MarketManager
     }
 
     /**
-     * @return CartService
+     * @param PurchaseInterface $purchase
+     * @return $this
      */
-    public function card()
+    public function addPhurchase(PurchaseInterface $purchase)
     {
-        return $this->cardService;
+        $this->cardService
+            ->add($purchase);
+        return $this;
+    }
+
+    /**
+     * @param VariantInterface $variant
+     * @param int $amount
+     * @return MarketManager
+     */
+    public function addVariant(VariantInterface $variant, $amount = 1)
+    {
+        /** @var PurchaseInterface[] $purchases */
+        $purchases = $this->cardService->getPurchases();
+
+        /** @var PurchaseInterface $purchase */
+        foreach ($purchases as $purchase) {
+            if ($purchase->getVariant()->getId() == $variant->getId()) {
+                $purchase->setAmount($purchase->getAmount() + $amount);
+                return $this->addPhurchase($purchase);
+            }
+        }
+
+        /** @var Purchase $purchase */
+        $purchase = (new Purchase)
+            ->setVariant($variant)
+            ->setAmount($amount);
+
+        return $this->addPhurchase($purchase);
+    }
+
+    /**
+     * @return OrderInterface
+     */
+    public function getOrder()
+    {
+        /** @var PurchaseInterface[] $purchases */
+        $purchases = $this->cardService->getPurchases();
+
+        /** @var OrderInterface $order */
+        $order = (new Order)
+            ->setPurchases($purchases);
+
+        /** @var PurchaseInterface $purchase */
+        foreach ($purchases as $purchase) {
+            $order
+                ->setPrice($order->getPrice() + $purchase->getPrice())
+                ->setAmount($order->getAmount() + $purchase->getAmount());
+        }
+
+        return $order;
     }
 }

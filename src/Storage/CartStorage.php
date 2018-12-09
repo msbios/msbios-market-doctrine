@@ -89,10 +89,14 @@ class CartStorage implements CartStorageInterface
     }
 
     /**
-     * @return mixed
+     * @return array|mixed
      */
     public function read()
     {
+        if ($this->isEmpty()) {
+            return [];
+        }
+
         return $this->session->{$this->member};
     }
 

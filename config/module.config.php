@@ -30,10 +30,22 @@ return [
                     'cart' => [
                         'type' => Segment::class,
                         'options' => [
-                            'route' => 'cart[.html]',
+                            'route' => 'cart[/]',
                             'defaults' => [
                                 'controller' => Controller\CartController::class,
                             ]
+                        ],
+                        'may_terminate' => true,
+                        'child_routes' => [
+                            'add' => [
+                                'type' => Segment::class,
+                                'options' => [
+                                    'route' => 'add[/]',
+                                    'defaults' => [
+                                        'action' => 'add',
+                                    ]
+                                ],
+                            ],
                         ],
                     ],
                     'catalog' => [
@@ -113,6 +125,8 @@ return [
         'factories' => [
             CartService::class =>
                 Factory\CartServiceFactory::class,
+            MarketManager::class =>
+                Factory\MarketManagerFactory::class,
 
             Storage\CartObjectStorage::class =>
                 Factory\CartObjectStorageFactory::class

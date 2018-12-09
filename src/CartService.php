@@ -8,8 +8,6 @@ namespace MSBios\Market\Doctrine;
 
 use MSBios\Market\Doctrine\Storage\CartStorage;
 use MSBios\Market\Doctrine\Storage\CartStorageInterface;
-use MSBios\Market\Resource\Doctrine\Entity\Order;
-use MSBios\Market\Resource\Doctrine\Entity\Purchase;
 
 /**
  * Class CartService
@@ -63,11 +61,10 @@ class CartService implements CartServiceInterface
     }
 
     /**
-     * @return Order
+     * @return mixed
      */
-    public function getOrder()
+    public function getPurchases()
     {
-        return (new Order)
-            ->setPurchases($this->getStorage()->read());
+        return $this->getStorage()->read();
     }
 }

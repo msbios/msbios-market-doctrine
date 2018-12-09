@@ -52,16 +52,19 @@ namespace MSBios\Market\Doctrine;
 
 <table class="table table-condensed table-striped">
     <tr>
-        <td>Photo</td>
-        <td>Name</td>
-        <td>Price</td>
-        <td>Amount</td>
+        <th>Photo</th>
+        <th>Name</th>
+        <th>Variant</th>
+        <th>Price</th>
+        <th>Amount</th>
     </tr>
 <?php foreach ($this->order->getPurchases() as $purchase): ?>
+    <?php $variant = $purchase->getVariant(); ?>
     <tr>
         <td></td>
-        <td><?= $purchase->getVariant()->getProduct()->getName(); ?></td>
-        <td><?= $purchase->getVariant()->getPrice(); ?></td>
+        <td><?= $variant->getProduct()->getName(); ?></td>
+        <td><?= $variant->getName(); ?></td>
+        <td><?= $variant->getPrice(); ?></td>
         <td><?= $purchase->getAmount(); ?></td>
     </tr>
 <?php endforeach; ?>
@@ -69,6 +72,7 @@ namespace MSBios\Market\Doctrine;
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
+        <th><?= $this->order->getPrice(); ?></th>
+        <th><?= $this->order->getAmount(); ?></th>
     </tr>
 </table>

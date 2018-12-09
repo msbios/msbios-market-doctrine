@@ -13,7 +13,7 @@ $variants = $this->product->getVariants();
 ?>
 
 <?php if (count($variants)) : ?>
-    <form action="<?= $this->url('home/cart'); ?>" method="post">
+    <form action="<?= $this->url('home/cart/add'); ?>" method="post">
         <ul>
             <?php if (count($variants) > 1) : ?>
 

@@ -51,9 +51,8 @@ class CartObjectStorage extends CartStorage implements ObjectManagerAwareInterfa
 
             /** @var array $contents */
             $contents = ArrayUtils::merge(
-                parent::read(), [$variant->getId() => $contents->getAmount()]
+                [$variant->getId() => $contents->getAmount()], parent::read()
             );
-
         }
 
         return parent::write($contents);
@@ -67,7 +66,7 @@ class CartObjectStorage extends CartStorage implements ObjectManagerAwareInterfa
         /** @var ObjectManager $dem */
         $dem = $this->getObjectManager();
 
-        /** @var array $purchases */
+        /** @var PurchaseInterface[] $purchases */
         $purchases = [];
 
         /**
@@ -77,9 +76,14 @@ class CartObjectStorage extends CartStorage implements ObjectManagerAwareInterfa
         foreach ($contents as $id => $amount) {
             /** @var Variant $variant */
             if ($variant = $dem->find(Variant::class, $id)) {
-                $purchases[] = (new Purchase)
+
+                /** @var PurchaseInterface $purchase */
+                $purchase = (new Purchase)
                     ->setVariant($variant)
-                    ->setAmount($amount);
+                    ->setAmount($amount)
+                    ->setPrice($variant->getPrice() * $amount);
+
+                $purchases[] = $purchase;
             }
         }
 

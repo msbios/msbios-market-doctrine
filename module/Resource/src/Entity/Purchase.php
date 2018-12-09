@@ -8,6 +8,8 @@ namespace MSBios\Market\Resource\Doctrine\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use MSBios\Market\Doctrine\PurchaseInterface;
+use MSBios\Market\Resource\Doctrine\AmountableAwareInterface;
+use MSBios\Market\Resource\Doctrine\AmountableAwareTrait;
 use MSBios\Market\Resource\Doctrine\Entity;
 use MSBios\Market\Resource\Doctrine\PriceableAwareInterface;
 use MSBios\Market\Resource\Doctrine\PriceableAwareTrait;
@@ -25,11 +27,11 @@ use MSBios\Resource\Doctrine\TimestampableAwareTrait;
  */
 class Purchase extends Entity implements
     PurchaseInterface,
-    PriceableAwareInterface,
     TimestampableAwareInterface,
     RowStatusableAwareInterface
 {
     use PriceableAwareTrait;
+    use AmountableAwareTrait;
     use TimestampableAwareTrait;
     use RowStatusableAwareTrait;
 
@@ -48,13 +50,6 @@ class Purchase extends Entity implements
      * @ORM\JoinColumn(name="variantid", referencedColumnName="id")
      */
     private $variant;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="amount")
-     */
-    private $amount = 0;
 
     /**
      * @return Order
@@ -89,24 +84,6 @@ class Purchase extends Entity implements
     public function setVariant(Variant $variant)
     {
         $this->variant = $variant;
-        return $this;
-    }
-
-    /**
-     * @return int
-     */
-    public function getAmount(): int
-    {
-        return $this->amount;
-    }
-
-    /**
-     * @param int $amount
-     * @return $this
-     */
-    public function setAmount(int $amount)
-    {
-        $this->amount = $amount;
         return $this;
     }
 }

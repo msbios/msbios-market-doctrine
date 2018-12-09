@@ -9,9 +9,9 @@ namespace MSBios\Market\Resource\Doctrine\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use MSBios\Market\Doctrine\OrderInterface;
+use MSBios\Market\Resource\Doctrine\AmountableAwareTrait;
 use MSBios\Market\Resource\Doctrine\Entity;
-use MSBios\Resource\Doctrine\NameableAwareInterface;
-use MSBios\Resource\Doctrine\NameableAwareTrait;
+use MSBios\Market\Resource\Doctrine\PriceableAwareTrait;
 use MSBios\Resource\Doctrine\RowStatusableAwareInterface;
 use MSBios\Resource\Doctrine\RowStatusableAwareTrait;
 use MSBios\Resource\Doctrine\TimestampableAwareInterface;
@@ -26,11 +26,11 @@ use MSBios\Resource\Doctrine\TimestampableAwareTrait;
  */
 class Order extends Entity implements
     OrderInterface,
-    NameableAwareInterface,
     TimestampableAwareInterface,
     RowStatusableAwareInterface
 {
-    use NameableAwareTrait;
+    use PriceableAwareTrait;
+    use AmountableAwareTrait;
     use TimestampableAwareTrait;
     use RowStatusableAwareTrait;
 

@@ -5,21 +5,16 @@
  */
 namespace MSBios\Market\Doctrine\Factory;
 
-use Doctrine\ORM\EntityManager;
 use Interop\Container\ContainerInterface;
-use Interop\Container\Exception\ContainerException;
 use MSBios\Market\Doctrine\CartService;
-use MSBios\Market\Doctrine\Controller\CartController;
 use MSBios\Market\Doctrine\MarketManager;
-use Zend\ServiceManager\Exception\ServiceNotCreatedException;
-use Zend\ServiceManager\Exception\ServiceNotFoundException;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Class CartControllerFactory
+ * Class MarketManagerFactory
  * @package MSBios\Market\Doctrine\Factory
  */
-class CartControllerFactory implements FactoryInterface
+class MarketManagerFactory implements FactoryInterface
 {
     /**
      * @inheritdoc
@@ -27,13 +22,12 @@ class CartControllerFactory implements FactoryInterface
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param array|null $options
-     * @return object|void
+     * @return MarketManager|object
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-       return new CartController(
-           $container->get(EntityManager::class),
-           $container->get(MarketManager::class)
+       return new MarketManager(
+           $container->get(CartService::class)
        );
     }
 }
