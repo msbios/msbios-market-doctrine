@@ -40,7 +40,8 @@
     "msbios/guard-cpanel-doctrine": "^1.0",
     "msbios/guard-resource": "^1.0",
     "msbios/comment-doctrine": "^1.0",
-    "msbios/session": "^1.0"
+    "msbios/session": "^1.0",
+    "zendframework/zend-code": "^3.3"
   },
   "require-dev": {
     "msbios/debug": "^1.0",

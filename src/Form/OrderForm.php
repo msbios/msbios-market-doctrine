@@ -37,7 +37,10 @@ class OrderForm extends Form
                 'allow_remove' => true,
                 'target_element' => [
                     'type' => Fieldset::class,
-                    'hydrator' => DoctrineObject::class,
+                    // 'hydrator' => DoctrineObject::class,
+                    // 'options' => [
+                    //     'allowed_object_binding_class' => true
+                    // ],
                     'elements' => [
                         [
                             'spec' => [
@@ -58,6 +61,7 @@ class OrderForm extends Form
                             'spec' => [
                                 'type' => Fieldset::class,
                                 'name' => 'variant',
+                                'hydrator' => DoctrineObject::class,
                                 'elements' => [
                                     [
                                         'spec' => [
@@ -78,6 +82,7 @@ class OrderForm extends Form
                                 ]
                             ]
                         ]
+
                     ]
                 ]
             ]

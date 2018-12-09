@@ -9,6 +9,7 @@ namespace MSBios\Market\Doctrine\Controller;
 use Doctrine\Common\Persistence\ObjectManager;
 use DoctrineModule\Stdlib\Hydrator\DoctrineObject;
 use MSBios\Market\Doctrine\Form\OrderForm;
+use MSBios\Market\Doctrine\Hydrator\OrderHydrator;
 use MSBios\Market\Doctrine\MarketManagerInterface;
 use MSBios\Market\Doctrine\Mvc\Controller\AbstractActionController;
 use MSBios\Market\Resource\Doctrine\Entity\Order;
@@ -57,7 +58,7 @@ class CartController extends AbstractActionController
         /** @var OrderForm $form */
         $form = $this->formElementManager->get(OrderForm::class);
         $form->setAttribute('action', $this->url()->fromRoute($this->getEvent()->getRouteMatch()->getMatchedRouteName()));
-        $form->setHydrator(new DoctrineObject($this->getObjectManager()));
+        $form->setHydrator(new OrderHydrator($this->getObjectManager()));
         $form->bind($order);
 
         if ($this->getRequest()->isPost()) {

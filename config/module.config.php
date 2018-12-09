@@ -138,5 +138,8 @@ return [
             Form\OrderForm::class =>
                 InvokableFactory::class
         ],
+        'initializers' => [
+            new ObjectManagerInitializer
+        ]
     ],
 ];
