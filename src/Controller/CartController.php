@@ -7,7 +7,6 @@
 namespace MSBios\Market\Doctrine\Controller;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use DoctrineModule\Stdlib\Hydrator\DoctrineObject;
 use MSBios\Market\Doctrine\Form\OrderForm;
 use MSBios\Market\Doctrine\Hydrator\OrderHydrator;
 use MSBios\Market\Doctrine\MarketManagerInterface;
@@ -41,7 +40,8 @@ class CartController extends AbstractActionController
         ObjectManager $objectManager,
         FormElementManagerV3Polyfill $formElementManagerV3Polyfill,
         MarketManagerInterface $marketManager
-    ) {
+    )
+    {
         $this->setObjectManager($objectManager);
         $this->formElementManager = $formElementManagerV3Polyfill;
         $this->marketManager = $marketManager;
@@ -56,12 +56,12 @@ class CartController extends AbstractActionController
         $order = $this->marketManager->getOrder();
 
         /** @var OrderForm $form */
-        $form = $this->formElementManager->get(OrderForm::class);
-        $form->setAttribute('action', $this->url()->fromRoute($this->getEvent()->getRouteMatch()->getMatchedRouteName()));
-        $form->setHydrator(new OrderHydrator($this->getObjectManager()));
-        $form->bind($order);
+        $form = $this->formElementManager->get(OrderForm::class)
+            ->setAttribute('action', $this->url()->fromRoute($this->getEvent()->getRouteMatch()->getMatchedRouteName()))
+            ->setData((new OrderHydrator($this->getObjectManager()))->extract($order));
 
         if ($this->getRequest()->isPost()) {
+
             if ($form->setData($this->params()->fromPost())->isValid()) {
 
                 /** @var EntityInterface|Order $entity */
@@ -75,6 +75,7 @@ class CartController extends AbstractActionController
                 $this
                     ->flashMessenger()
                     ->addSuccessMessage('Thank. Your order has been successfully accepted.');
+
             } else {
                 r($form->getMessages());
                 die();
@@ -84,7 +85,6 @@ class CartController extends AbstractActionController
                 ->redirect()
                 ->toRoute($this->getEvent()->getRouteMatch()->getMatchedRouteName());
         }
-
 
 
         return new ViewModel([

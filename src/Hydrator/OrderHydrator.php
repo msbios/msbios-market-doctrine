@@ -14,5 +14,22 @@ use DoctrineModule\Stdlib\Hydrator\DoctrineObject;
  */
 class OrderHydrator extends DoctrineObject
 {
-    // ...
+    /**
+     * @param object $object
+     * @return array
+     */
+    public function extract($object)
+    {
+        /** @var array $data */
+        $data = parent::extract($object);
+
+        foreach ($data['purchases'] as $key => $purchase) {
+            $purchase = parent::extract($purchase);
+            $purchase['variant'] = parent::extract($purchase['variant']);
+            $data['purchases'][$key] = $purchase;
+        }
+
+        return $data;
+    }
+
 }

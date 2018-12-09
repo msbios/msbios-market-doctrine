@@ -298,4 +298,12 @@ class Product extends Entity implements
         $this->options = $options;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }

@@ -60,7 +60,7 @@ class Variant extends Entity implements
     /**
      * @var string
      *
-     * @ORM\Column(type="decimal", precision=14, scale=2, nullable=false)
+     * @ORM\Column(name="compare", type="decimal", precision=14, scale=2, nullable=false)
      */
     private $compare = 0.00;
 

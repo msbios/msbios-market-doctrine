@@ -76,6 +76,7 @@ class Order extends Entity implements
      */
     public function addPurchase(Purchase $purchase)
     {
+        $purchase->setOrder($this);
         $this->purchases->add($purchase);
         return $this;
     }
@@ -100,6 +101,7 @@ class Order extends Entity implements
      */
     public function removePurchase(Purchase $purchase)
     {
+        $purchase->setOrder(null);
         $this->purchases->removeElement($purchase);
         return $this;
     }
@@ -116,4 +118,6 @@ class Order extends Entity implements
 
         return $this;
     }
+
+
 }

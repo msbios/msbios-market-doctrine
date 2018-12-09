@@ -6,7 +6,8 @@
 
 namespace MSBios\Market\Doctrine\Form;
 
-use DoctrineModule\Stdlib\Hydrator\DoctrineObject;
+use MSBios\Market\Resource\Doctrine\Entity\Variant;
+use MSBios\Market\Resource\Doctrine\Form\VariantForm;
 use Zend\Form\Element;
 use Zend\Form\Fieldset;
 use Zend\Form\Form;
@@ -31,16 +32,11 @@ class OrderForm extends Form
         ])->add([
             'type' => Element\Collection::class,
             'name' => 'purchases',
-            'hydrator' => DoctrineObject::class,
             'options' => [
                 'allow_add' => true,
                 'allow_remove' => true,
                 'target_element' => [
                     'type' => Fieldset::class,
-                    // 'hydrator' => DoctrineObject::class,
-                    // 'options' => [
-                    //     'allowed_object_binding_class' => true
-                    // ],
                     'elements' => [
                         [
                             'spec' => [
@@ -57,32 +53,34 @@ class OrderForm extends Form
                                 'type' => Element\Text::class,
                                 'name' => 'amount',
                             ]
-                        ], [
+                        ]
+                    ],
+                    'fieldsets' => [
+                        [
                             'spec' => [
-                                'type' => Fieldset::class,
+                                'type' => VariantForm::class,
                                 'name' => 'variant',
-                                'hydrator' => DoctrineObject::class,
-                                'elements' => [
-                                    [
-                                        'spec' => [
-                                            'type' => Element\Text::class,
-                                            'name' => 'id',
-                                        ]
-                                    ], [
-                                        'spec' => [
-                                            'type' => Element\Text::class,
-                                            'name' => 'code',
-                                        ]
-                                    ], [
-                                        'spec' => [
-                                            'type' => Element\Text::class,
-                                            'name' => 'name',
-                                        ]
-                                    ]
-                                ]
+                                //'object' => Variant::class,
+                                //'elements' => [
+                                //    [
+                                //        'spec' => [
+                                //            'type' => Element\Text::class,
+                                //            'name' => 'id',
+                                //        ]
+                                //    ], [
+                                //        'spec' => [
+                                //            'type' => Element\Text::class,
+                                //            'name' => 'code',
+                                //        ]
+                                //    ], [
+                                //        'spec' => [
+                                //            'type' => Element\Text::class,
+                                //            'name' => 'name',
+                                //        ]
+                                //    ]
+                                //]
                             ]
                         ]
-
                     ]
                 ]
             ]
