@@ -51,7 +51,8 @@ class CartObjectStorage extends CartStorage implements ObjectManagerAwareInterfa
 
             /** @var array $contents */
             $contents = ArrayUtils::merge(
-                [$variant->getId() => $contents->getAmount()], parent::read()
+                [$variant->getId() => $contents->getAmount()],
+                parent::read()
             );
         }
 

@@ -28,7 +28,8 @@ trait PriceableAwareTrait
         return $this->price;
 
         return number_format(
-            round((float)$this->price, 2), 2
+            round((float)$this->price, 2),
+            2
         );
     }
 

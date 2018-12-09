@@ -31,9 +31,9 @@ class CartControllerFactory implements FactoryInterface
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-       return new CartController(
-           $container->get(EntityManager::class),
-           $container->get(MarketManager::class)
-       );
+        return new CartController(
+            $container->get(EntityManager::class),
+            $container->get(MarketManager::class)
+        );
     }
 }

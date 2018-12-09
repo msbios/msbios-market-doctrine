@@ -42,7 +42,6 @@ class CartController extends AbstractActionController
     public function indexAction()
     {
         if ($this->getRequest()->isPost()) {
-
             // /** @var ObjectManager $dem */
             // $dem = $this->getObjectManager();
             //
@@ -105,5 +104,4 @@ class CartController extends AbstractActionController
             ->redirect()
             ->toRoute('home');
     }
-
 }

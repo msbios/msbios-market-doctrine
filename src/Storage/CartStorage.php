@@ -85,7 +85,7 @@ class CartStorage implements CartStorageInterface
      */
     public function isEmpty()
     {
-        return !isset($this->session->{$this->member});
+        return ! isset($this->session->{$this->member});
     }
 
     /**

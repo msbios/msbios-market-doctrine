@@ -24,7 +24,7 @@ class CartService implements CartServiceInterface
      */
     public function __construct(CartStorageInterface $storage = null)
     {
-        if (!is_null($storage)) {
+        if (! is_null($storage)) {
             $this->setStorage($storage);
         }
     }
