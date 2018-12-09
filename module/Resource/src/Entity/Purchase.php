@@ -8,10 +8,8 @@ namespace MSBios\Market\Resource\Doctrine\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use MSBios\Market\Doctrine\PurchaseInterface;
-use MSBios\Market\Resource\Doctrine\AmountableAwareInterface;
 use MSBios\Market\Resource\Doctrine\AmountableAwareTrait;
 use MSBios\Market\Resource\Doctrine\Entity;
-use MSBios\Market\Resource\Doctrine\PriceableAwareInterface;
 use MSBios\Market\Resource\Doctrine\PriceableAwareTrait;
 use MSBios\Resource\Doctrine\RowStatusableAwareInterface;
 use MSBios\Resource\Doctrine\RowStatusableAwareTrait;

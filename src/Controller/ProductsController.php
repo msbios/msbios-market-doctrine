@@ -52,7 +52,7 @@ class ProductsController extends AbstractActionController
             /** @var array $data */
             $data = $this->params()->fromQuery();
 
-            if (isset($data['name']) && !empty($data['name'])) {
+            if (isset($data['name']) && ! empty($data['name'])) {
                 $qb->andWhere($qb->expr()->like('p.name', ':name'))
                 ->setParameter('name', "%{$data['name']}%");
             }

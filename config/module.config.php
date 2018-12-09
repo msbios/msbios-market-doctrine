@@ -133,7 +133,10 @@ return [
         ],
     ],
 
-    'listeners' => [
-        // ...
-    ]
+    'form_elements' => [
+        'factories' => [
+            Form\OrderForm::class =>
+                InvokableFactory::class
+        ],
+    ],
 ];

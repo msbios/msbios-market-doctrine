@@ -7,12 +7,8 @@ namespace MSBios\Market\Doctrine\Factory;
 
 use Doctrine\ORM\EntityManager;
 use Interop\Container\ContainerInterface;
-use Interop\Container\Exception\ContainerException;
-use MSBios\Market\Doctrine\CartService;
 use MSBios\Market\Doctrine\Controller\CartController;
 use MSBios\Market\Doctrine\MarketManager;
-use Zend\ServiceManager\Exception\ServiceNotCreatedException;
-use Zend\ServiceManager\Exception\ServiceNotFoundException;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
@@ -33,6 +29,7 @@ class CartControllerFactory implements FactoryInterface
     {
         return new CartController(
             $container->get(EntityManager::class),
+            $container->get('FormElementManager'),
             $container->get(MarketManager::class)
         );
     }

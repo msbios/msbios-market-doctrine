@@ -78,10 +78,12 @@ class MarketManager implements MarketManagerInterface
             ->setPurchases($purchases);
 
         /** @var PurchaseInterface $purchase */
-        foreach ($purchases as $purchase) {
+        foreach ($order->getPurchases() as $purchase) {
             $order
                 ->setPrice($order->getPrice() + $purchase->getPrice())
                 ->setAmount($order->getAmount() + $purchase->getAmount());
+            $purchase
+                ->setOrder($order);
         }
 
         return $order;

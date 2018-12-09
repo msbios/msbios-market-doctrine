@@ -69,4 +69,51 @@ class Order extends Entity implements
         $this->purchases = $purchases;
         return $this;
     }
+
+    /**
+     * @param Purchase $purchase
+     * @return $this
+     */
+    public function addPurchase(Purchase $purchase)
+    {
+        $this->purchases->add($purchase);
+        return $this;
+    }
+
+    /**
+     * @param ArrayCollection $purchases
+     * @return $this
+     */
+    public function addPurchases(ArrayCollection $purchases)
+    {
+        /** @var Purchase $purchase */
+        foreach ($purchases as $purchase) {
+            $this->addPurchase($purchase);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param Purchase $purchase
+     * @return $this
+     */
+    public function removePurchase(Purchase $purchase)
+    {
+        $this->purchases->removeElement($purchase);
+        return $this;
+    }
+
+    /**
+     * @param ArrayCollection $purchases
+     * @return $this
+     */
+    public function removePurchases(ArrayCollection $purchases)
+    {
+        foreach ($purchases as $purchase) {
+            $this->removePurchase($purchase);
+        }
+
+        return $this;
+    }
 }
