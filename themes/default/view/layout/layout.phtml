@@ -71,18 +71,23 @@ use MSBios\Market\Resource\Doctrine\Entity\Brand;
     <div class="row">
         <div class="col-md-3">
 
-            <form role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search" name="name">
-                </div>
-            </form>
+            <?= $this->form()->openTag((new \Zend\Form\Form())
+                ->setAttribute('method', 'get')
+                ->setAttribute('action', $this->url('home/products'))
+                ->setAttribute('role', 'search')) ?>
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="name">
+            </div>
+
+            <?= $this->form()->closeTag(); ?>
 
             <?= $this->partial('partial/categories.phtml', ['categories' => $this->categories]); ?>
             <h3>Все бренды:</h3>
             <?php /** @var Brand $brand */ ?>
             <?php foreach ($this->brands as $brand): ?>
                 <a href="<?= $this->url('home/brands', ['id' => $brand->getId(), 'slug' => $brand->getSlug()]); ?>">
-                    <?= $brand->getName();?>
+                    <?= $brand->getName(); ?>
                 </a>
             <?php endforeach; ?>
         </div>

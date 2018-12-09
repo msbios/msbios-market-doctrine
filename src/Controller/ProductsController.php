@@ -6,8 +6,10 @@
 
 namespace MSBios\Market\Doctrine\Controller;
 
+use Doctrine\ORM\QueryBuilder;
 use MSBios\Market\Doctrine\Mvc\Controller\AbstractActionController;
 use MSBios\Market\Resource\Doctrine\Entity\Product;
+use MSBios\Paginator\Doctrine\Adapter\QueryBuilderPaginator;
 use Zend\Paginator\Paginator;
 use Zend\View\Model\ViewModel;
 
@@ -38,9 +40,29 @@ class ProductsController extends AbstractActionController
      */
     public function indexAction()
     {
+        /**
+         * @param QueryBuilder $qb
+         * @return QueryBuilderPaginator
+         */
+        $findBy = function (QueryBuilder $qb) {
+            $qb
+                ->where($qb->expr()->eq('p.rowStatus', ':rowStatus'))
+                ->setParameter('rowStatus', true);
+
+            /** @var array $data */
+            $data = $this->params()->fromQuery();
+
+            if (isset($data['name']) && !empty($data['name'])) {
+                $qb->andWhere($qb->expr()->like('p.name', ':name'))
+                ->setParameter('name', "%{$data['name']}%");
+            }
+
+            return new QueryBuilderPaginator($qb);
+        };
+
         /** @var Paginator $products */
         $products = $this->getRepository()
-            ->fetchAll(['o.rowStatus' => true]);
+            ->fetchAll($findBy);
 
         $products
             ->setPageRange(self::PAGE_RANGE)
